@@ -36,10 +36,10 @@
         </div>
     </nav>
 
-    <div class='border py-7'>
-        <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Donación de libro</h1>
+   
+        <h1 class='text-4xl py-5 px-10 border  border-[#124A71] '>Donación de libro</h1>
 
-        </div>
+        
 
 
     <div class="flex min-h-screen">

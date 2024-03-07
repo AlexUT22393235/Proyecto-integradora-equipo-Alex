@@ -1,4 +1,3 @@
-@vite('resources/css/app.css')
 @extends('plantilla')
 
 @section('content')
@@ -9,13 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Editar</title>
-
 </head>
 <body>
 
     <main>
         <div class="bg-[#7ea3ca] py-8">
-            <h1 class="text-3xl font-bold text-center text-white">Permisos</h1>   
+            <h1 class="text-3xl font-bold text-center text-white">Permisos</h1>
         </div>
 
         <br>
@@ -29,29 +27,30 @@
                 <input type="file" id="profile-picture" name="profile-picture" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
             </div>
         </div>
+
         <div class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-md">
             <form>
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="inline-password">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="inline-full-name">
                         Nueva Contraseña
                     </label>
-                    <input class="bg-[#325b87] appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="password" placeholder="******************" >
+                    <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-black leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-full-name" type="password" placeholder="******************" >
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="inline-password">
                         Confirmar Contraseña
                     </label>
-                    <input class="bg-[#325b87] appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-white leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-password" type="password" placeholder="******************">
+                    <input class="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-black leading-tight focus:outline-none focus:bg-white focus:border-blue-500" id="inline-password" type="password" placeholder="******************">
                 </div>
-                <div class="flex items-center justify-between">
-                    <button class="bg-blue-#1d4ed8 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                <div class="flex items-center justify-center">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                         Guardar
                     </button>
                 </div>
             </form>
         </div>
-    </main>    
-    
+    </main>
+
 </body>
 </html>
 @endsection

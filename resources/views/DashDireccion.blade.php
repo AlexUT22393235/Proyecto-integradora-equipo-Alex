@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="flex flex-col items-start justify-center h-screen p-8">
-    <h1 class="text-3xl font-bold text-gray-800">Bienvenido (Dirección)</h1>
+    <h1 class="text-3xl text-gray-500 m-9">Bienvenido (Docente)!</h1>
     <br>
     <br>
     <br>

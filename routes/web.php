@@ -3,24 +3,28 @@
 use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
+use App\Http\Controllers\ProjectController;
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
 
 //Vistas KENIA
 //ruta de crud de documentos vista de presidente
-Route::get('/Admindocs', function () {
+Route::get('/Admindocs', function () { //Kenia
     return view('Admindocs');
 });
-Route::get('/Direccion', function () {
+Route::get('/Direccion', function () { //Rafa
     return view('DashDireccion');
 });
-Route::get('/AdminAsesores', function () {
+Route::get('/AdminAsesores', function () {//Mia
     return view('crudAsesores');
+});
+Route::get('/asesoresyestudiantes', function () {//Mauricio
+    return view('AsesoresEstudiantes');
 });
 
 //VISTAS RICHIE
 
-Route::get('/CrudAsesorDeAdmin', function () {
+Route::get('/CrudAsesorDeAdmin', function () { //Richie
     return view('CrudAsesorDeAdmin');
 });
 Route::get('/CrudDireccionDeAdmin', function () {
@@ -29,30 +33,30 @@ Route::get('/CrudDireccionDeAdmin', function () {
 Route::get('/CrudPresidenteDeAdmin', function () {
     return view('CrudPresidenteDeAdmin');
 });
-Route::get('/permisos', function(){
+Route::get('/permisos', function(){ //Giovanni
     return view('Permisos');
 });
-Route::get('/editarPerfil', function(){
+Route::get('/editarPerfil', function(){//Giovanni
     return view('editarPerfil');
 });
-Route::get('/', function(){
+Route::get('/', function(){ //Andrea
     return view('Login');
 });
-Route::get('/DashboardAlumno', function(){
+Route::get('/DashboardAlumno', function(){ //Andrea
     return view('DashboardAlumno');
 });
 
 //Vistas ALEX
-Route::get('/donacionLibros', function () {
+Route::get('/donacionLibros', function () { // Lara
     return view('DonacionLibros');
 });
-Route::get('/calendario', function () {
+Route::get('/calendario', function () { //Alex
     return view('calendario');
 });
-Route::get('/ProyectosAsesor', function () {
+Route::get('/ProyectosAsesor', function () { //Antonino
     return view('ProyectosAsesor');
 });
-Route::get('/dashboardAsesor', function () {
+Route::get('/dashboardAsesor', function () { //Ricardo 
     return view('dashboardAsesor');
 });
 
@@ -84,8 +88,18 @@ Route::get('/dashboardAdmin', function () {
 Route::get('/librosAlumno', function () {
     return view('LibrosAlumno');
 });
+Route::get('/controlLibros', function () {
+    return view('controlLibros');
+});
 
 //Vistas DIEGO
 Route::get('/edicionProyecto', function(){
     return view('EdicionProyecto');
 });
+
+Route::get('project_details', [ProjectController::class, 'showDetails']);
+
+Route::get('/alumnoDocs', function(){
+    return view('AlumnoDocs');
+});
+
