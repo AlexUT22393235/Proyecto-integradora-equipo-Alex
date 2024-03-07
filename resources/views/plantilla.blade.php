@@ -16,7 +16,7 @@
                 <img src="https://github.com/AlexUT22393235/Proyecto-integradora-equipo-Alex/blob/integracion/public/images/logo.png?raw=true" alt="Logo" class="w-auto mr-20 h-9 max-w-32">
             </a>
 
-            <div class="italic font-thin space-x-9">
+            <div class="font-semibold space-x-9">
                 <a href="Control">
 
                 </a>
