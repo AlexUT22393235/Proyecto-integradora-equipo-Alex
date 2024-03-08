@@ -51,7 +51,7 @@
                 <h2 class="text-blue-800 text-lg">Estatus del proyecto</h2>
                 <p>Comentarios: <span class="text-red-600">2</span></p>
                 <p>Votos: <span class="text-green-600">3</span></p>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center justify-center mx-auto vote-button">
+                <button class="bg-red-300 text-white px-4 py-2 rounded-xl shadow-lg flex items-center justify-center mx-auto vote-button">
                     <span class="text-lg mr-2">❤️</span> Votar
                 </button>
             </div>
@@ -60,7 +60,7 @@
                 <p>El documento presentado no tiene ningún aspecto que se tenga que corroborar ya que abarco todos los
                     requerimientos que se tienen que cumplir y tiene <span
                         class="text-green-600">3</span> votos a favor y eso da autorización al siguiente paso.</p>
-                <button class="mt-4 bg-blue-800 text-white px-5 py-2 rounded shadow comment-button">Comentar</button>
+                <button class="mt-4 bg-blue-800 text-white px-5 py-2 rounded-xl shadow-lg comment-button">Comentar</button>
             </div>
         </div>
     </div>
