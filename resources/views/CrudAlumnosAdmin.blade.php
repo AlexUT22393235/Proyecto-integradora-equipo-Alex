@@ -14,11 +14,19 @@
 
 <body>
 <div>
-    <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">
+    <div class="font-bold text-zinc-400 border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
         Lista de Alumnos
     </div>
     <div style="margin-left: 2cm; margin-right: 2cm;">
-        <div class="p-5">
+        <div class="">
+            <div class="flex mt-5" style="margin-left: 1100px;">
+                <button
+                    type="button"
+                    class="text-white px-4 py-2 rounded-xl shadow-lg bg-blue-300"
+                >
+                    Agregar
+                </button>
+            </div>
             <div class="mt-5 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
                 <table class="w-full table-auto bg-gray-200 rounded-t-lg">
                     <thead class="text-center text-white bg-[#325b87]">
