@@ -8,14 +8,14 @@ use App\Http\Controllers\ProjectController;
 Route::resource('documentos', DocumentoController::class);
 
 //Vistas KENIA
-//ruta de crud de documentos vista de presidente
+//ruta de crud de documentos vista de presidente, 1 por estandarizar
 Route::get('/Admindocs', function () { //Kenia
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //Rafa
     return view('DashDireccion');
 });
-Route::get('/AdminAsesores', function () {//Mia
+Route::get('/AdminAsesores', function () {//Mia por confirmar
     return view('crudAsesores');
 });
 Route::get('/asesoresyestudiantes', function () {//Mauricio
@@ -61,8 +61,8 @@ Route::get('/dashboardAsesor', function () { //Ricardo
 });
 
 
-//Vistas KAREN
-Route::get('/estudiantesAsesorados', function(){
+//Vistas KAREN 2 por confirmar estandarizacion
+Route::get('/estudiantesAsesorados', function(){//por confirmar
     return view('AlumnosAsesorados');
 });
 Route::get('/cartasAlumnoAdo', function(){
@@ -71,12 +71,12 @@ Route::get('/cartasAlumnoAdo', function(){
 Route::get('/dashboardPresidente', function(){
     return view('DashboardPresidente');
 });
-Route::get('/controlProyectoPresidente', function(){
+Route::get('/controlProyectoPresidente', function(){//por confirmar
     return view('ControlProyectoPresidente');
 });
 
 //Vistas JONNY
-Route::get('/docsDireccion', function(){
+Route::get('/docsDireccion', function(){ //por confirmar
     return view('DocsDireccion');
 });
 Route::get('/crudAlumnosAdmin', function(){
@@ -85,10 +85,10 @@ Route::get('/crudAlumnosAdmin', function(){
 Route::get('/dashboardAdmin', function () {
     return view('DashboardAdmin');
 });
-Route::get('/librosAlumno', function () {
+Route::get('/librosAlumno', function () { //por confirmar
     return view('LibrosAlumno');
 });
-Route::get('/ControlLibros', function () {
+Route::get('/ControlLibros', function () { //vacioooo
     return view('ControlLibros');
 });
 

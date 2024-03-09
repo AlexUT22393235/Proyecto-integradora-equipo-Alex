@@ -26,12 +26,13 @@
         }
     </style>
 </head>
+<div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">
+    Control de proyectos
+</div>
 <body class="flex flex-col min-h-screen bg-gray-100">
 
-<div class="flex-grow">
-    <div class="border-t-4  text-center p-5">
-        <h1 class="text-2xl">Información del proyecto</h1>
-    </div>
+<div class="flex-grow mt-5" >
+    
     <div class="flex justify-evenly items-start p-6">
         <div class="w-full max-w-lg">
             <div class="flex flex-col items-center mb-6">
