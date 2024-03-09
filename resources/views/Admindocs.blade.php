@@ -8,7 +8,7 @@
     <div class="mb-4">
     </div>
     <div class="overflow-x-auto w-full flex justify-center">
-        <table class="bg-white rounded-t-lg shadow-lg text-sm md:text-base">
+        <table class=" rounded-t-lg shadow-lg text-sm md:text-base">
             <thead class="bg-sge text-white">
                 <tr>
                     <th class="px-10 py-4">Id</th>

@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
-    <!-- Agregar aquí la referencia a los estilos de Tailwind CSS -->
-    @vite('resources/css/app.css')
+@extends('plantillaAsesor')
 
-    <!-- Por ejemplo, puedes utilizar una CDN o incluir los estilos compilados localmente -->
-</head>
+@section('content')
 <body className="max-w-sm rounded overflow-hidden shadow-md  m-10">
-    <div class="w-full bg-[#325B87] flex flex-row p-3">
-        <div class="flex items-center space-x-8">
-        <img src="logo.png" alt="Logo" class="w-auto mr-20 h-9 max-w-32"></div>
-        <div class="flex flex-row m-auto text-[#F8F8F8] gap-7 mr-4 inter-variacion ">
-          
-            <h3 class="div__ul-li m-auto">
-                Gestión de estadias
-            </h3>
-            <h3 class="div__ul-li m-auto">
-                Proyecto
-            </h3>
-            <h3 class="div__ul-li m-auto">
-                Calendario
-            </h3>
-            <h3 class="div__ul-li m-auto">
-                Documentos
-            </h3>
-            <img src='/user.png' class='h-[10%] w-[10%] items-center' alt="user"/>
-        </div>
-        <div class="flex-item user-img"></div>
-      </div>
-        <div class="bg-[#F8F8F8] h-[81%]">
-        <div class="bg-[#F8F8F8] h-[81%]">
+    
     <div class="container mx-auto">
             <h1 class='text-4xl py-5 px-3 '>Calendario</h1>
         <div class="flex p-4">
@@ -94,3 +64,4 @@
     <!-- Aquí puedes incluir la referencia a los scripts necesarios, por ejemplo, para Tailwind CSS y otros -->
 </body>
 </html>
+@endsection
