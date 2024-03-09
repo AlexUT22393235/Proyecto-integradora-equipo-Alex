@@ -1,3 +1,6 @@
+@extends('plantilla')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -22,81 +25,54 @@
         </style>
 
         <style>
-           
-
-            h2{
-                font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+            h1 {
+                font-family: "", ;
             }
 
         </style>
         @vite('resources/css/app.css')
 
 </head>
-<body>
+<body class=" bg-blue-50">
 
-    <nav style="background-color: #325b87;">
-        <div class="flex items-center justify-between p-6">
-            <div class="flex items-center space-x-8">
-                <a href="/">
-                    <img src="images/logo.png" alt="Logo" class="w-auto mr-20 h-9 max-w-32">
+   
+
+        <div  class="container mx-auto mt-20">
+            <div></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+
+                <a href="/Alumnos" class="border-l-4 border-red-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                    <div class="flex flex-col items-center justify-center mb-4">
+                        <h3 class="text-blue-800 text-2xl font-semibold mb-4">Alumnos</h3>
+                        <img src="/alumno.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
+                        <p class="text-gray-600 text-center">Información sobre los alumnos</p>
+                    </div>
+                </a>
+                <a href="/DocumentosAlumnos" class="border-l-4 border-blue-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                    <div class="flex flex-col items-center justify-center mb-4">
+                        <h3 class="text-blue-800 text-2xl font-semibold mb-4">Proyectos</h3>
+                        <img src="/proyecto.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
+                        <p class="text-gray-600 text-center">Proyectos en el área de ingeniería</p>
+                    </div>
                 </a>
 
-                <div class="italic font-thin space-x-9">
-                    <a href="Control">
-                        <button class="text-white">Proyectos</button>
-                    </a>
-                    <button class="text-white">Asesores</button>
-                    <button class="text-white">Docentes</button>
-                    <button class="text-white">Documentos</button>
-                    <a href="Tabla">
-                        <button class="text-white">Alumnos</button>
-                    </a>
-                    <button class="text-white">Roles</button>
-                </div>
-            </div>
+                <a href="/Calendario" class="border-l-4 border-pink-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                    <div class="flex flex-col items-center justify-center mb-4">
+                        <h3 class="text-blue-800 text-2xl font-semibold mb-4">Calendario</h3>
+                        <img src="/calendario.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
+                        <p class="text-gray-600 text-center">Calendario para citas y tareas</p>
+                    </div>
+                </a>
 
-            <div class="flex items-center">
-                <input type="text" placeholder="Buscar..." class="p-2 mr-4 bg-white rounded-md">
-            </div>
-        </div>
-    </nav>
+            
 
-    <div class='border py-7'>
-        <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Dashboard asesor</h1>
+            
 
         </div>
-
-        <div class=' p-10 flex'>
-
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-xl dark:bg-white mr-10 ">
-                <div class="px-6 py-4">
-                    <h2 class="font-bold text-xl mb-2 text-indigo-700 p-5">Estudiantes Asesorados</h2>
-                    <p class="text-gray-700 text-base p-5">Todos los Estudiantes asesorados
-                    </p>
-                </div>
-            </div>
-
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-xl dark:bg-white mr-10">
-                <div class="px-6 py-4">
-                    <h2 class="font-bold text-xl mb-2 text-indigo-700 p-5">Proyectos</h2>
-                    <p class="text-gray-700 text-base p-5">Todos los proyectos asesorados
-                    </p>
-                </div>
-            </div>
-
-            <div class="max-w-sm rounded-xl overflow-hidden shadow-xl dark:bg-white mr-10">
-                <div class="px-6 py-4">
-                    <h2 class="font-bold text-xl mb-2 text-indigo-700 p-5">Calendario</h2>
-                    <p class="text-gray-700 text-base p-5">Revisa tus citas y reuniones
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
+</div>
 
         
 </body>
 </html>
+@endsection

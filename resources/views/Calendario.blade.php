@@ -10,39 +10,31 @@
     <!-- Por ejemplo, puedes utilizar una CDN o incluir los estilos compilados localmente -->
 </head>
 <body className="max-w-sm rounded overflow-hidden shadow-md  m-10">
-    <nav class="flex items-center justify-between p-6 bg-[#325b87]">
+    <div class="w-full bg-[#325B87] flex flex-row p-3">
         <div class="flex items-center space-x-8">
-            <img src="/images/logo.png" alt="Logo" class="w-auto mr-20 h-9 max-w-32" />
-
-  
-          <div class="italic font-thin space-x-9">
-            <Link to='/DonacionLibro'>
-            <button class="text-white">Donacion Libro</button>
-  
-            </Link>
-  
-            <Link to='/Calendario'>
-            <button class="text-white">Calendario</button>
-  
-            </Link>
-            
-          </div>
+        <img src="logo.png" alt="Logo" class="w-auto mr-20 h-9 max-w-32"></div>
+        <div class="flex flex-row m-auto text-[#F8F8F8] gap-7 mr-4 inter-variacion ">
+          
+            <h3 class="div__ul-li m-auto">
+                Gestión de estadias
+            </h3>
+            <h3 class="div__ul-li m-auto">
+                Proyecto
+            </h3>
+            <h3 class="div__ul-li m-auto">
+                Calendario
+            </h3>
+            <h3 class="div__ul-li m-auto">
+                Documentos
+            </h3>
+            <img src='/user.png' class='h-[10%] w-[10%] items-center' alt="user"/>
         </div>
-  
-        <div class="flex items-center">
-          <input
-            type="text"
-            placeholder="Buscar..."
-            class="p-2 mr-4 bg-white rounded-md"
-          />
-        </div>
-      </nav>
+        <div class="flex-item user-img"></div>
+      </div>
+        <div class="bg-[#F8F8F8] h-[81%]">
+        <div class="bg-[#F8F8F8] h-[81%]">
     <div class="container mx-auto">
-        <div class='border py-7'>
-            <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Calendario</h1>
-    
-            </div>
-
+            <h1 class='text-4xl py-5 px-3 '>Calendario</h1>
         <div class="flex p-4">
             <!-- Card "Mis tareas" -->
             <div class="max-w-sm rounded overflow-hidden shadow-md m-4 ml-16">

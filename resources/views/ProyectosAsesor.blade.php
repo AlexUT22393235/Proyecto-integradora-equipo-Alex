@@ -1,3 +1,6 @@
+@extends('plantilla')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,31 +86,18 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     <title>Document</title>
 </head>
 <body>
-    <header class="bg-sky-900 p-4 flex items-center"> 
-        <h1 class="text-2xl font-bold text-white mr-10">SGE/UT</h1>
-        <ul class="flex text-white items-start">
-            <li class="mr-24">Gestion de Estadias</li>
-            <li class="mr-24">Proyectos</li>
-            <li class="mr-24">Calendario</li>
-            <li class="mr-24">Documentos</li>
-        </ul>
-        
-    </header>
-    
-    <div class='border py-7'>
-        <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Vista de proyectos</h1>
-
-        </div>
+   
+        <h1 class='text-4xl py-5 px-5 '>Vista de proyectos</h1>
     
     <main>
-        <div class="flex items-center justify-end mt-3">
-            <div class="relative mx-20">
+        <div class="flex items-center justify-end">
+            <div class="relative">
                 <i class="absolute left-2 top-1/2 transform -translate-y-1/2 fas fa-search text-gray-500"></i>
                 <input type="text" placeholder="Buscar" class="border border-gray-300 px-2 py-1 rounded-lg pl-8 pr-3">
             </div>
         </div>
         
-        <div class="p-4 mt-20 mx-20 "> <!-- Agregamos mx-4 para el margen horizontal -->
+        <div class="p-4 mt-2 mx-2 "> <!-- Agregamos mx-4 para el margen horizontal -->
             <table class="w-full">
                 <thead>
                     <tr class="bg-gray-200">
@@ -167,3 +157,4 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
 </body>
 </html>
+@endsection

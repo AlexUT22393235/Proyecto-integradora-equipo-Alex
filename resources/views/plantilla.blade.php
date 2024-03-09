@@ -34,9 +34,7 @@
             </div>
         </div>
 
-        <div class="flex items-center">
-            <input type="text" placeholder="Buscar..." class="p-2 mr-4 bg-white rounded-md">
-        </div>
+
     </div>
 </nav>
    <main>
