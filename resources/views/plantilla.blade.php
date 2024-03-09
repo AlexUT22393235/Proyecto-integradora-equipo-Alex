@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   
 </head>
-<body>
+<body class="bg-blue-50">
   <nav style="background-color: #325b87;">
     <div class="flex items-center justify-between p-6">
         <div class="flex items-center space-x-8">
@@ -17,10 +17,10 @@
             </a>
 
             <div class="font-semibold space-x-9">
-                <a href="Control">
-
+                <a href="asesoresyestudiantes">
+                  <button class="text-white">Asesores-Estudiantes</button>
                 </a>
-                <button class="text-white">Asesores-Estudiantes</button>
+                
                 <a href="AdminAsesores">
                   <button class="text-white">Asesores</button>
               </a>
