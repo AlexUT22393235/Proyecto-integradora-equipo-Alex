@@ -1,42 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
-    <!-- Agregar aquí la referencia a los estilos de Tailwind CSS -->
-    @vite('resources/css/app.css')
+@extends('plantillaAsesor')
 
-    <!-- Por ejemplo, puedes utilizar una CDN o incluir los estilos compilados localmente -->
-</head>
+@section('content')
 <body className="max-w-sm rounded overflow-hidden shadow-md  m-10">
-    <nav class="flex items-center justify-between p-6 bg-[#325b87]">
-        <div class="flex items-center space-x-8">
-            <img src="/images/logo.png" alt="Logo" class="w-auto mr-20 h-9 max-w-32" />
-
   
-          <div class="italic font-thin space-x-9">
-            <Link to='/DonacionLibro'>
-            <button class="text-white">Donacion Libro</button>
-  
-            </Link>
-  
-            <Link to='/Calendario'>
-            <button class="text-white">Calendario</button>
-  
-            </Link>
-            
-          </div>
-        </div>
-  
-        <div class="flex items-center">
-          <input
-            type="text"
-            placeholder="Buscar..."
-            class="p-2 mr-4 bg-white rounded-md"
-          />
-        </div>
-      </nav>
+        
     <div class="container mx-auto">
         <div class='border py-7'>
             <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Calendario</h1>
@@ -102,3 +69,4 @@
     <!-- Aquí puedes incluir la referencia a los scripts necesarios, por ejemplo, para Tailwind CSS y otros -->
 </body>
 </html>
+@endsection

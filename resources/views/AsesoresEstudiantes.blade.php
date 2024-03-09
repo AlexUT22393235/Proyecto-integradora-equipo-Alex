@@ -7,7 +7,7 @@
 </div>
 
 <div class="flex justify-between">
-    <div class="bg-blue-100 p-4 w-1/3 mb-2 ml-32 border border-grey mr-2 rounded-xl">
+    <div class="bg-blue-100 p-4 w-1/3 h-full mb-2 ml-32 border border-grey mr-2 rounded-xl " style="max-height: 600px;">
         <h2 class="text-xl font-bold mb-4">Asesores</h2>
         <div class="mb-4">
             <input type="text" placeholder="Buscar asesor" class="border border-gray-300 rounded-md px-4 py-2">
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div id="card-details" class="bg-blue-100 p-4 w-1/3 ml-2 mb-4 mt-0 mr-32 hover:bg-gray-50 rounded-xl">
+    <div id="card-details" class="bg-blue-100 p-4 w-1/3 ml-2 mb-4 mt-0 mr-32 hover:bg-gray-50 rounded-xl  border-grey">
         <!-- Contenido del elemento -->
 
         
