@@ -13,7 +13,7 @@
 
     <main>
         <div class="bg-[#7ea3ca] py-8">
-            <h1 class="text-3xl font-bold text-center text-white">Permisos</h1>
+            <h1 class="text-3xl font-bold text-center text-white">Editar Perfil</h1>
         </div>
 
         <br>

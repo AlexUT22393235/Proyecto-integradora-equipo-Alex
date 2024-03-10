@@ -4,18 +4,17 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
-//uso resource para llamar a todos los metodos de una y no uno x uno
-Route::resource('documentos', DocumentoController::class);
+
 
 //Vistas KENIA
-//ruta de crud de documentos vista de presidente, 1 por estandarizar
+//ruta de crud de documentos vista de presidente
 Route::get('/Admindocs', function () { //Kenia
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //Rafa
     return view('DashDireccion');
 });
-Route::get('/AdminAsesores', function () {//Mia por confirmar
+Route::get('/AdminAsesores', function () {//Mia
     return view('crudAsesores');
 });
 Route::get('/asesoresyestudiantes', function () {//Mauricio
@@ -33,16 +32,16 @@ Route::get('/CrudDireccionDeAdmin', function () {
 Route::get('/CrudPresidenteDeAdmin', function () {
     return view('CrudPresidenteDeAdmin');
 });
-Route::get('/permisos', function(){ //Giovanni
+Route::get('/permisos', function(){ //Giovanni sin cambios
     return view('Permisos');
 });
-Route::get('/editarPerfil', function(){//Giovanni
+Route::get('/editarPerfil', function(){// geovani sin cambios
     return view('editarPerfil');
 });
-Route::get('/', function(){ //Andrea
+Route::get('/', function(){ //Andrea sin cambios
     return view('Login');
 });
-Route::get('/DashboardAlumno', function(){ //Andrea
+Route::get('/DashboardAlumno', function(){ //Andrea sin cambios
     return view('DashboardAlumno');
 });
 
