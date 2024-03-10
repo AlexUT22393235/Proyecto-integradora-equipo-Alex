@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaPresidente')
 
 @section('content')
 <!DOCTYPE html>
@@ -26,12 +26,13 @@
         }
     </style>
 </head>
-<body class="flex flex-col min-h-screen bg-gray-100">
+<div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">
+    Control de proyectos
+</div>
+<body class="flex flex-col min-h-screen bg-blue-50">
 
-<div class="flex-grow">
-    <div class="border-t-4  text-center p-5">
-        <h1 class="text-2xl">Información del proyecto</h1>
-    </div>
+<div class="flex-grow mt-5" >
+    
     <div class="flex justify-evenly items-start p-6">
         <div class="w-full max-w-lg">
             <div class="flex flex-col items-center mb-6">
@@ -42,25 +43,25 @@
             </div>
         </div>
         <div class="flex flex-col w-full max-w-lg gap-4">
-            <div class="bg-gray-200 p-4 text-center rounded shadow">
+            <div class="bg-blue-100 p-4 text-center rounded shadow">
                 <h2 class="text-blue-800 text-lg">Asesor Académico</h2>
                 <p>Rafael Villegas</p>
                 <p class="text-red-600">rvillegas@utcancun.edu.mx</p>
             </div>
-            <div class="bg-gray-200 p-4 text-center rounded shadow">
+            <div class="bg-blue-100 p-4 text-center rounded shadow">
                 <h2 class="text-blue-800 text-lg">Estatus del proyecto</h2>
                 <p>Comentarios: <span class="text-red-600">2</span></p>
                 <p>Votos: <span class="text-green-600">3</span></p>
-                <button class="bg-red-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center justify-center mx-auto vote-button">
+                <button class="bg-red-300 text-white px-4 py-2 rounded-xl shadow-lg flex items-center justify-center mx-auto vote-button">
                     <span class="text-lg mr-2">❤️</span> Votar
                 </button>
             </div>
-            <div class="bg-gray-200 p-4 w-full text-center rounded shadow">
+            <div class="bg-blue-100 p-4 w-full text-center rounded shadow">
                 <h2 class="text-blue-800 text-lg">Comentarios:</h2>
                 <p>El documento presentado no tiene ningún aspecto que se tenga que corroborar ya que abarco todos los
                     requerimientos que se tienen que cumplir y tiene <span
                         class="text-green-600">3</span> votos a favor y eso da autorización al siguiente paso.</p>
-                <button class="mt-4 bg-blue-800 text-white px-5 py-2 rounded shadow comment-button">Comentar</button>
+                <button class="mt-4 bg-blue-800 text-white px-5 py-2 rounded-xl shadow-lg comment-button">Comentar</button>
             </div>
         </div>
     </div>

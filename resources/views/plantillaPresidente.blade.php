@@ -17,26 +17,27 @@
             </a>
 
             <div class="font-semibold space-x-9">
-                <a href="asesoresyestudiantes">
-                  <button class="text-white">Asesores-Estudiantes</button>
+                <a href="dashboardAsesor">
+                  <button class="text-white">Vista presidente</button>
                 </a>
                 
-                <a href="AdminAsesores">
-                  <button class="text-white">Asesores</button>
+                <a href="calendario">
+                  <button class="text-white">Calendario</button>
               </a>
-                <a href="Admindocs">
-                    <button class="text-white">Documentos</button>
+                <a href="ProyectosAsesor">
+                    <button class="text-white">Vista de Proyectos</button>
                 </a>
-                <a href="Direccion">
-                  <button class="text-white">Direccion</button>
+                <a href="estudiantesAsesorados">
+                  <button class="text-white">Control Asesorados</button>
               </a>
+              <a href="cartasAlumnoAdo">
+                <button class="text-white">Control Cartas</button>
+            </a>
               
             </div>
         </div>
 
-        <div class="flex items-center">
-            <input type="text" placeholder="Buscar..." class="p-2 mr-4 bg-white rounded-md">
-        </div>
+    
     </div>
 </nav>
    <main>

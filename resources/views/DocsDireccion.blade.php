@@ -1,6 +1,6 @@
 @extends('plantilla')
-@section('content')
 
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +17,7 @@
     <div>
         <div style="margin-left: 2cm; margin-right: 2cm;">
             <br />
-            <div class="bg-white p-4 font-bold border-b border-black text-left">
+            <div class="bg-white p-4 font-bold border-b border-black text-2xl">
                 Control de Documento del Alumno
             </div>
             <br />

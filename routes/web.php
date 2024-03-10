@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
-//uso resource para llamar a todos los metodos de una y no uno x uno
-Route::resource('documentos', DocumentoController::class);
+
 
 //Vistas KENIA
 //ruta de crud de documentos vista de presidente
@@ -33,16 +32,16 @@ Route::get('/CrudDireccionDeAdmin', function () {
 Route::get('/CrudPresidenteDeAdmin', function () {
     return view('CrudPresidenteDeAdmin');
 });
-Route::get('/permisos', function(){ //Giovanni
+Route::get('/permisos', function(){ //Giovanni sin cambios
     return view('Permisos');
 });
-Route::get('/editarPerfil', function(){//Giovanni
+Route::get('/editarPerfil', function(){// geovani sin cambios
     return view('editarPerfil');
 });
-Route::get('/', function(){ //Andrea
+Route::get('/', function(){ //Andrea sin cambios
     return view('Login');
 });
-Route::get('/DashboardAlumno', function(){ //Andrea
+Route::get('/DashboardAlumno', function(){ //Andrea sin cambios
     return view('DashboardAlumno');
 });
 
@@ -61,22 +60,22 @@ Route::get('/dashboardAsesor', function () { //Ricardo
 });
 
 
-//Vistas KAREN
+//Vistas KAREN listas
 Route::get('/estudiantesAsesorados', function(){
     return view('AlumnosAsesorados');
 });
-Route::get('/cartasAlumnoAdo', function(){
+Route::get('/cartasAlumnoAdo', function(){ //quitar no se va ocupar pero se va reutilizar
     return view('CartasAlumnoAdo');
 });
 Route::get('/dashboardPresidente', function(){
     return view('DashboardPresidente');
 });
-Route::get('/controlProyectoPresidente', function(){
+Route::get('/controlProyectoPresidente', function(){//por confirmar
     return view('ControlProyectoPresidente');
 });
 
 //Vistas JONNY
-Route::get('/docsDireccion', function(){
+Route::get('/docsDireccion', function(){ //por confirmar
     return view('DocsDireccion');
 });
 Route::get('/crudAlumnosAdmin', function(){
@@ -85,11 +84,11 @@ Route::get('/crudAlumnosAdmin', function(){
 Route::get('/dashboardAdmin', function () {
     return view('DashboardAdmin');
 });
-Route::get('/librosAlumno', function () {
+Route::get('/librosAlumno', function () { //por confirmar
     return view('LibrosAlumno');
 });
-Route::get('/controlLibros', function () {
-    return view('controlLibros');
+Route::get('/ControlLibros', function () { //vacioooo
+    return view('ControlLibros');
 });
 
 //Vistas DIEGO
