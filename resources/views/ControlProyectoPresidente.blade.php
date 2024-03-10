@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaPresidente')
 
 @section('content')
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
 <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">
     Control de proyectos
 </div>
-<body class="flex flex-col min-h-screen bg-gray-100">
+<body class="flex flex-col min-h-screen bg-blue-50">
 
 <div class="flex-grow mt-5" >
     
@@ -43,12 +43,12 @@
             </div>
         </div>
         <div class="flex flex-col w-full max-w-lg gap-4">
-            <div class="bg-gray-200 p-4 text-center rounded shadow">
+            <div class="bg-blue-100 p-4 text-center rounded shadow">
                 <h2 class="text-blue-800 text-lg">Asesor Académico</h2>
                 <p>Rafael Villegas</p>
                 <p class="text-red-600">rvillegas@utcancun.edu.mx</p>
             </div>
-            <div class="bg-gray-200 p-4 text-center rounded shadow">
+            <div class="bg-blue-100 p-4 text-center rounded shadow">
                 <h2 class="text-blue-800 text-lg">Estatus del proyecto</h2>
                 <p>Comentarios: <span class="text-red-600">2</span></p>
                 <p>Votos: <span class="text-green-600">3</span></p>
@@ -56,7 +56,7 @@
                     <span class="text-lg mr-2">❤️</span> Votar
                 </button>
             </div>
-            <div class="bg-gray-200 p-4 w-full text-center rounded shadow">
+            <div class="bg-blue-100 p-4 w-full text-center rounded shadow">
                 <h2 class="text-blue-800 text-lg">Comentarios:</h2>
                 <p>El documento presentado no tiene ningún aspecto que se tenga que corroborar ya que abarco todos los
                     requerimientos que se tienen que cumplir y tiene <span

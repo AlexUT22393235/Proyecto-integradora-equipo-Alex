@@ -18,7 +18,7 @@
 
             <div class="font-semibold space-x-9">
                 <a href="dashboardAsesor">
-                  <button class="text-white">Dashboard Asesor</button>
+                  <button class="text-white">Vista presidente</button>
                 </a>
                 
                 <a href="calendario">

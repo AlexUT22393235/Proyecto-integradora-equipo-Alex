@@ -49,7 +49,7 @@
 		}
 
     .body{
-			background: #0D476D;
+			background: #325b87;
 			transition: all .5s;
 			padding: 1px;
       min-height: 100vh;

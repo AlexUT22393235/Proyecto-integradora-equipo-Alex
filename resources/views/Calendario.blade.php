@@ -5,10 +5,9 @@
   
         
     <div class="container mx-auto">
-        <div class='border py-7'>
-            <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Calendario</h1>
+       
+            <h1 class='text-2xl py-5 px-10 font-bold '>Calendario</h1>
     
-            </div>
 
         <div class="flex p-4">
             <!-- Card "Mis tareas" -->
