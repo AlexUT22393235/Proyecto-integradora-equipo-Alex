@@ -43,5 +43,10 @@
    <main>
     @yield('content')
    </main>
+   <footer>
+    <div class='bg-[#325B87] w-full mb-0 h-10 '>
+        <p class='text-[#F8F8F8] text-left ml-5 p-2 inter-variacion'>Copyright Universidad Tecnológica de Cancún © 2024</p>
+      </div>
+</footer>
 </body>
 </html>

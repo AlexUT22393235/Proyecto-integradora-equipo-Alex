@@ -1,8 +1,8 @@
 @extends('plantilla')
 
 @section('content')
-<body class="bg-blue-50">
-    <h1 class="text-2xl text-gray-500 m-9 font-bold ">Bienvenido (Direccion)!</h1>
+
+  
     <div>
         <div class="container mx-auto mt-20">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -30,5 +30,5 @@
         </div>
     </div>
 
-</body>
+
 @endsection

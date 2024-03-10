@@ -60,11 +60,11 @@ Route::get('/dashboardAsesor', function () { //Ricardo
 });
 
 
-//Vistas KAREN 2 por confirmar estandarizacion
-Route::get('/estudiantesAsesorados', function(){//por confirmar
+//Vistas KAREN listas
+Route::get('/estudiantesAsesorados', function(){
     return view('AlumnosAsesorados');
 });
-Route::get('/cartasAlumnoAdo', function(){
+Route::get('/cartasAlumnoAdo', function(){ //quitar no se va ocupar pero se va reutilizar
     return view('CartasAlumnoAdo');
 });
 Route::get('/dashboardPresidente', function(){
