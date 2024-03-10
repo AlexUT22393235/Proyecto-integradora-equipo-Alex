@@ -1,7 +1,7 @@
 @vite('resources/css/app.css')
 @extends('plantilla')
 
-
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -120,3 +120,5 @@
     </script>
 </body>
 </html>
+@section('content')
+
