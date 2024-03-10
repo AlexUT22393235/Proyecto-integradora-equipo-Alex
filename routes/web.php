@@ -7,14 +7,14 @@ use App\Http\Controllers\ProjectController;
 
 
 //Vistas KENIA
-//ruta de crud de documentos vista de presidente
+//ruta de crud de documentos vista de presidente, 1 por estandarizar
 Route::get('/Admindocs', function () { //Kenia
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //Rafa
     return view('DashDireccion');
 });
-Route::get('/AdminAsesores', function () {//Mia
+Route::get('/AdminAsesores', function () {//Mia por confirmar
     return view('crudAsesores');
 });
 Route::get('/asesoresyestudiantes', function () {//Mauricio
