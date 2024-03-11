@@ -14,16 +14,22 @@
     <style>
         body {
             font-family: 'OtraFuente', sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            font-weight: bold; /* Agregado para hacer el texto bold (negrita) */
+        }
+
+        /* Agregamos la clase bg-blue-50 al body */
+        body.bg-blue-50 {
+            background-color: #AED6F1; /* Cambiado a color azul claro con el nombre bg-blue-50 */
         }
 
         header {
             background-color: #0D476D;
-            color: #fff;
+            color: #black;
             padding: 20px;
             text-align: center;
+            font-size: 3xl; 
         }
 
         table {
@@ -65,7 +71,7 @@
         }
     </style>
 </head>
-<body>
+<body class="bg-blue-50">
 
     <br/>
     <br/>
