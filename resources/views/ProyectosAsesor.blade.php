@@ -1,3 +1,6 @@
+@extends('PlantillaAdmin')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,16 +86,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     <title>Document</title>
 </head>
 <body>
-    <header class="bg-sky-900 p-4 flex items-center"> 
-        <h1 class="text-2xl font-bold text-white mr-10">SGE/UT</h1>
-        <ul class="flex text-white items-start">
-            <li class="mr-24">Gestion de Estadias</li>
-            <li class="mr-24">Proyectos</li>
-            <li class="mr-24">Calendario</li>
-            <li class="mr-24">Documentos</li>
-        </ul>
-        
-    </header>
+
     
     <div class='border py-7'>
         <h1 class='text-4xl py-5 px-10 border shadow-lg border-[#124A71] '>Vista de proyectos</h1>
@@ -158,12 +152,6 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             </table>
         </div>
     </main>
-
-    <footer class=" p-2 text-white">
-        <div class="container mx-auto flex items-center">
-            <p class="mr-auto ml-4">Copyright Universidad Tecnológica de Cancún © 2024</p>
-        </div>
-    </footer>
-    
 </body>
 </html>
+@endsection

@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('PlantillaAdmin')
 
 @section('content')
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 
 <body>
 <div>
-    <div class="font-bold text-zinc-400 border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
+    <div class="font-bold text-black border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
         Lista de Alumnos
     </div>
     <div style="margin-left: 2cm; margin-right: 2cm;">
@@ -22,7 +22,7 @@
             <div class="flex mt-5" style="margin-left: 1100px;">
                 <button
                     type="button"
-                    class="text-white px-4 py-2 rounded-xl shadow-lg bg-blue-300"
+                    class="text-white px-4 py-2 rounded-xl shadow-lg bg-[#325b87]"
                 >
                     Agregar
                 </button>
