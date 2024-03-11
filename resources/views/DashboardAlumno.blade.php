@@ -47,9 +47,9 @@
         <div class="flex-item user-img"></div>
     </div>
 
-    <div class="bg-blue-50 h-[87%]">
+    <div class="bg-blue-50 h-[83%]">
         <Title titulo="Sistema de Gestión de Estadías"></Title>
-        <div class="flex flex-row h-full pt-4 pb-2 m-auto inter-variacion ">
+        <div class="flex flex-row h-full pt-4 pb-2 m-auto inter-variacion ">
             <div
                 class="flex flex-col justify-between w-[17%] m-1 p-4 mx-4 mb-4 transition-transform duration-300 transform bg-white border-l-4 border-green-500 shadow-md rounded-2xl hover:scale-105 hover:shadow-md hover:bg-gray-50">
                 <h4 class="text-[#010D82] pb-2 text-xl montserrat-alternates-regular-italic">
