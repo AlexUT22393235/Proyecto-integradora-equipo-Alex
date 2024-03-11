@@ -31,5 +31,58 @@
 		</form>
     </div>
 
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('form').addEventListener('submit', function (event) {
+                event.preventDefault();
+        
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                // Aquí vamos a verificar que los campos se llenen
+                if (!username || !password) {
+                alert('Por favor, ingrese tanto el correo como la contraseña.');
+                return;
+                }
+        
+                // Aquí vamos a validar los correos y contraseñas
+                var validCredentials = {
+                    'direccion@ut.com': '1234',
+                    'alumno@ut.com': '1234',
+                    'asesor@ut.com': '1234',
+                    'presidente@ut.com': '1234',
+                    'administrador@ut.com': '1234',
+                };
+        
+                if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+                    //En caso de que las credenciales sean las correctas ya redirigirá a la vista correspondiente
+                    switch (username) {
+                        case 'direccion@ut.com':
+                            window.location.href = '/Direccion';
+                            break;
+                        case 'alumno@ut.com':
+                            window.location.href = '/DashboardAlumno';
+                            break;
+                        case 'asesor@ut.com':
+                            window.location.href = '/dashboardAsesor';
+                            break;
+                        case 'presidente@ut.com':
+                            window.location.href = '/dashboardPresidente';
+                            break;
+                        case 'administrador@ut.com':
+                            window.location.href = '/dashboardAdmin';
+                            break;
+                        default:
+                            // En caso de error redirige a una pantalla de error
+                            window.location.href = '/error';
+                    }
+                } else {
+                    // Alerta para indicar que el correo o contraseña son incorrectos
+                    alert('Correo o contraseña invalido');
+                }
+            });
+        });
+        </script>
+        
+    </body>
 </html>

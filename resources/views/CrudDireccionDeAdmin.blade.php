@@ -1,3 +1,4 @@
+@vite('resources/css/app.css')
 @extends('PlantillaAdmin')
 
 @section('content')
@@ -10,26 +11,28 @@
     <title>CRUD DIRECCIÓN</title>
 </head>
 <body>
-    <main>
-        <div class="bg-[#7ea3ca]">
-            <h1 class="text-3xl font-bold text-center text-white">Crud Dirección</h1>
-        </div>
 
-        <div class="mt-5 mx-auto max-w-2xl">
+    <main>
+         {{-- Titulo --}}
+         <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3  text-2xl mx-5">
+            Crud Dirección
+          </div>
+
+          {{-- Agregar --}}
+          <div class="mt-5 max-w-2xl">
             <button id="open-modal-btn"
                 type="button"
-                class="block mx-auto bg-[#325b87] text-white px-4 py-2 rounded-md hover:bg-[#1e3349] focus:outline-none focus:bg-[#1e3349]"
+                class="block mx-20 bg-[#325b87] text-white px-4 py-2 rounded-md hover:bg-[#1e3349] focus:outline-none focus:bg-[#1e3349]"
             >
             Agregar Nuevo Directivo
             </button>
         </div>
 
+        {{-- Tabla --}}
         <div class="mt-5 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
             <table class="w-full table-auto bg-gray-200 rounded-t-lg">
                 <thead class="text-center text-white bg-[#325b87]">
                     <tr>
-                        <th class="p-2">ID</th>
-                        <th class="p-2">Nomina</th>
                         <th class="p-2">Nombre del Directivo</th>
                         <th class="p-2">División</th>
                         <th class="p-2">Estatus</th>
@@ -39,8 +42,6 @@
                 <tbody class="text-center bg-white">
                     @foreach(range(1, 10) as $index)
                         <tr class= 'border border-gray-200'>
-                            <td>{{ $index }}</td>
-                            <td>Nomina {{ $index }}</td>
                             <td>Directivo - NA {{ $index }}</td>
                             <td>Ingenieria</td>
                             <td>Activo</td>
@@ -94,7 +95,7 @@
             </form>
         </div>
     </div>
-    @endsection
+    
     
     <!-- JavaScript para controlar el modal -->
     <script>
@@ -119,3 +120,4 @@
     </script>
 </body>
 </html>
+@endsection
