@@ -1,7 +1,6 @@
+@extends('PlantillaAdmin')
 
-@extends('plantilla')
-
-@section( 'content')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
