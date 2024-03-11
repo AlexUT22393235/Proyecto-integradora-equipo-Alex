@@ -1,4 +1,4 @@
-@extends('plantillaAsesor')
+@extends('plantillaAlumno')
 
 @section('content')
 <body className="max-w-sm rounded overflow-hidden shadow-md  m-10">
@@ -11,20 +11,20 @@
 
         <div class="flex p-4">
             <!-- Card "Mis tareas" -->
-            <div class="max-w-sm rounded overflow-hidden shadow-md m-4 ml-16">
+            <div class="bg-white max-w-sm rounded-xl overflow-hidden shadow-xl ml-16">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-700">Mis tareas</div>
                     <p>
-                        <span class="text-[#325B87]">Fecha de entrega:</span>
+                        <span class="text-[#325B87] p-2">Fecha de entrega:</span>
                         <span class="text-[#63D9CD]">27/06/24</span>
                       </p>
                     <div class="mb-2">
-                        <label class="flex items-center space-x-2">
-                            <span class="text-black">Corrección de objetivo principal</span>
+                        <label class="flex items-center space-x-2 p-2">
+                            <span class="text-black font-semibold">Corrección de objetivo principal</span>
                             <input type="checkbox" class="form-checkbox h-5 w-5" />
                         </label>
-                        <label class="flex items-center space-x-2">
-                            <span class="text-black">Corrección de título</span>
+                        <label class="flex items-center space-x-2 p-2">
+                            <span class="text-black font-semibold">Corrección de título</span>
                             <input type="checkbox" class="form-checkbox h-5 w-5 " />
 
                         </label>
@@ -50,7 +50,7 @@
                                 $dayOfMonth = $rowIndex * 7 + $colIndex + 1;
                                 $dayToShow = $dayOfMonth <= 30 ? $dayOfMonth : $dayOfMonth - 30;
                             @endphp
-                            <div class="border border-gray-200 py-2">
+                            <div class="border border-gray-200 py-8">
                                 <!-- Renderizar solo si el día está dentro del mes -->
                                 {{ $dayToShow }}
                             </div>

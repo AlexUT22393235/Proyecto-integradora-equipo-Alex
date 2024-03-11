@@ -1,160 +1,166 @@
 @extends('plantillaAsesor')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    @vite('resources/css/app.css')
-    <style>
-        body{
-            background-color: #F8F8F8;
-        }
-        footer{
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #325B87; /* Color de fondo */
-            text-align: left; /* Alineación del texto */
-            color: white; /* Color del texto */
-        }
-        table {
-            border-collapse: separate;
-            border-spacing: 0 5px; /* Espacio de separación vertical entre filas */
-            width: 100%;
-        }
-        th, td {
-            padding: 10px; /* Espacio alrededor del contenido de cada celda */
-        }
-        th {
-            background-color: #cccccc; /* Color de fondo para las celdas de encabezado */
-            font-weight: normal; /* Quita la negrita del texto en los encabezados */
-        }
-        tbody tr {
-            background-color: #ffffff; /* Color de fondo para las filas de la tabla */
-        }
+    <!DOCTYPE html>
+    <html lang="en">
 
-        thead {
-            background-color: #ffffff; /* Fondo blanco para el encabezado de la tabla */
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        @vite('resources/css/app.css')
+        <style>
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #325B87;
+                /* Color de fondo */
+                text-align: left;
+                /* Alineación del texto */
+                color: white;
+                /* Color del texto */
+            }
 
-        .accion-icono {
-            text-align: center;
-            color: #325B87;
-        }
+            .accion-icono {
+                text-align: center;
+                color: #325B87;
+            }
 
-        .estado-aprobado,
-        .estado-proceso {
-            display: inline-block; /* Para que el span se comporte como un bloque en línea */
-            height: 30px;
-            width: 100px; /* Altura deseada */
-            line-height: 30px; /* Centra verticalmente el texto */
-            text-align: center; /* Centra horizontalmente el texto */
-            border-radius: 10px;
-            padding: 0 5px; /* Espaciado interno */
-        }
+            .estado-aprobado,
+            .estado-proceso {
+                display: inline-block;
+                /* Para que el span se comporte como un bloque en línea */
+                height: 30px;
+                width: 100px;
+                /* Altura deseada */
+                line-height: 30px;
+                /* Centra verticalmente el texto */
+                text-align: center;
+                /* Centra horizontalmente el texto */
+                border-radius: 10px;
+                padding: 0 5px;
+                /* Espaciado interno */
+            }
 
-        .estado-aprobado {
-            color: #00CD08; /* Color de texto aprobado */
-            background-color: #E5FEE7; /* Fondo aprobado */
-        }
+            .estado-aprobado {
+                color: #00CD08;
+                /* Color de texto aprobado */
+                background-color: #E5FEE7;
+                /* Fondo aprobado */
+            }
 
-        .estado-proceso {
-            color: #CD6200;
-            background-color: #FEF2E5;
-        }
+            .estado-proceso {
+                color: #CD6200;
+                background-color: #FEF2E5;
+            }
+        </style>
+        <title>Document</title>
+    </head>
 
-        .header-wrapper {
-        background-color: #ffffff;
-        height: 50px;
-        margin-top: 10px;
-        border-top: 1px solid #325B87;
-        border-bottom: 1px solid #325B87;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    <body>
 
-       
-    }
+        <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">             Vista de Proyectos           </div>
 
-    .header-text {
-        margin-left: 10px;
-    }
 
-    </style>
-    <title>Document</title>
-</head>
-<body>
-   
-        <h1 class='text-4xl py-5 px-5 '>Vista de proyectos</h1>
-    
-    <main>
-        <div class="flex items-center justify-end">
-            <div class="relative">
-                <i class="absolute left-2 top-1/2 transform -translate-y-1/2 fas fa-search text-gray-500"></i>
-                <input type="text" placeholder="Buscar" class="border border-gray-300 px-2 py-1 rounded-lg pl-8 pr-3">
-            </div>
-        </div>
-        
-        <div class="p-4 mt-2 mx-2 "> <!-- Agregamos mx-4 para el margen horizontal -->
-            <table class="w-full">
-                <thead>
-                    <tr class="bg-gray-200">
-                        <th class="text-left">Nombre del proyecto</th>
-                        <th class="text-left">Estudiante</th>
-                        <th class="text-left">Estatus</th>
-                        <th class="text-left">Votos</th>
-                        <th class="text-left">Acción</th>
+        <div
+            class="mt-5 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
+            <table class="w-full table-auto bg-gray-200 rounded-t-lg">
+                <thead class="text-center text-white bg-[#325b87]">
+                    <tr>
+                        <th class="p-2">Nombre del proyecto</th>
+                        <th class="p-2">Estudiante</th>
+                        <th class="p-2">Estatus</th>
+                        <th class="p-2">Votos</th>
+                        <th class="p-2">Accion</th>
+
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                <tbody class="text-center bg-white">
+
+                    <tr class= 'border border-gray-200'>
                         <td>Proyecto 1</td>
-                        <td>Estudiante 1</td>
+                        <td>Estudiante 1 </td>
                         <td><span class="estado-aprobado">Aprobado</span></td>
                         <td>3</td>
-                        <td><i class="accion-icono fas fa-eye"></i></td>
+
+                        <td class="pt-2 flex justify-center space-x-10">
+                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
+                                <i class="accion-icono fas fa-eye"></i> </button>
+
+                        </td>
+
+
                     </tr>
-                    <tr>
+
+                    <tr class= 'border border-gray-200'>
                         <td>Proyecto 2</td>
-                        <td>Estudiante 2</td>
+                        <td>Estudiante 2 </td>
                         <td><span class="estado-proceso">Proceso</span></td>
                         <td>2</td>
-                        <td><i class="accion-icono fas fa-eye"></i></td>
+
+                        <td class="pt-2 flex justify-center space-x-10">
+                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
+                                <i class="accion-icono fas fa-eye"></i> </button>
+
+
+                        </td>
+
+
                     </tr>
-                    <tr>
-                        <td>Proyecto 2</td>
-                        <td>Estudiante 2</td>
+
+                    <tr class= 'border border-gray-200'>
+                        <td>Proyecto 3</td>
+                        <td>Estudiante 3 </td>
                         <td><span class="estado-proceso">Proceso</span></td>
                         <td>0</td>
-                        <td><i class="accion-icono fas fa-eye"></i></td>
+
+                        <td class="pt-2 flex justify-center space-x-10">
+                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
+                                <i class="accion-icono fas fa-eye"></i>
+                            </button>
+
+                        </td>
+
+
                     </tr>
-                    <tr>
-                        <td>Proyecto 2</td>
-                        <td>Estudiante 2</td>
+
+                    <tr class= 'border border-gray-200'>
+                        <td>Proyecto 4</td>
+                        <td>Estudiante 4 </td>
                         <td><span class="estado-proceso">Proceso</span></td>
                         <td>0</td>
-                        <td><i class="accion-icono fas fa-eye"></i></td>
+
+                        <td class="pt-2 flex justify-center space-x-10">
+                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
+                                <i class="accion-icono fas fa-eye"></i> </button>
+
+                        </td>
+
+
                     </tr>
-                    <tr>
-                        <td>Proyecto 2</td>
-                        <td>Estudiante 2</td>
+
+                    <tr class= 'border border-gray-200'>
+                        <td>Proyecto 5</td>
+                        <td>Estudiante 5 </td>
                         <td><span class="estado-proceso">Proceso</span></td>
                         <td>0</td>
-                        <td><i class="accion-icono fas fa-eye"></i></td>
+
+                        <td class="pt-2 flex justify-center space-x-10">
+                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
+                                <i class="accion-icono fas fa-eye"></i> </button>
+
+                        </td>
+
+
                     </tr>
+
                 </tbody>
             </table>
         </div>
-    </main>
 
-    <footer class=" p-2 text-white">
-        <div class="container mx-auto flex items-center">
-            <p class="mr-auto ml-4">Copyright Universidad Tecnológica de Cancún © 2024</p>
-        </div>
-    </footer>
-    
-</body>
-</html>
+    </body>
+
+    </html>
 @endsection

@@ -52,6 +52,10 @@ Route::get('/donacionLibros', function () { // Lara
 Route::get('/calendario', function () { //Alex
     return view('calendario');
 });
+
+Route::get('/calendarioAsesor', function () { //Alex
+    return view('calendarioAsesor');
+});
 Route::get('/ProyectosAsesor', function () { //Antonino
     return view('ProyectosAsesor');
 });

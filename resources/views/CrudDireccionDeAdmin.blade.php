@@ -120,4 +120,4 @@
     </script>
 </body>
 </html>
-@endsection('content')
+@section('content')
