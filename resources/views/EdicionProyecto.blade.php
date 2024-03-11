@@ -18,7 +18,7 @@
  
     
 
-    <div class="relative mb-8 shadow-md">
+    <div class="relative mb-8 shadow-md bg-white">
         <hr class="mb-4 border-t-2 border-blue-900">
         <div class="block mb-6 ml-5 text-4xl">
             Edición del ante-proyecto
@@ -26,7 +26,7 @@
         <hr class="mt-6 border-b-2 border-blue-900">
     </div>
 
-    <div class="mb-4">
+    <div class="mb-4 bg-white">
         <hr class="mb-4 border-t-2 border-gray-900">
         <div class="block mb-8 ml-5 text-1xl">
             <div class="block mb-8 ml-5">
@@ -51,7 +51,7 @@
 
     <div>
         <div class="container p-8 mx-auto">
-            <form class="px-8 pt-6 pb-8 mb-4 rounded shadow-md project-details">
+            <form class="px-8 pt-6 pb-8 mb-4 rounded shadow-md project-details bg-white">
 
                 <div class="flex mb-4 mr-4">
                     <div class="flex-grow mr-4">

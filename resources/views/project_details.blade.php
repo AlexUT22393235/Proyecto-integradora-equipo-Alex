@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <style>
         /* Estilos CSS */
+
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        
         .input-field {
             border-color: transparent;
-            border-bottom-color: #CBD5E0;
+            border-bottom-color: #f0f0f0;
             border-width: 1px;
         }
         .centered-box {
             width: 900px;
-            background-color: #f2f2f2;
+            /* background-color: #f0f0f0; */
             border-radius: 10px;
             padding: 20px;
             margin: 0 auto;
