@@ -2,7 +2,6 @@
 
 @section('content')
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,7 +63,9 @@
     </style>
 </head>
 <body>
-
+    <div class="font-bold text-zinc-400 border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
+        Documentos del Alumnos
+    </div>
     <br/>
 
  
@@ -80,38 +81,37 @@
             <tr>
                 <td>Formato de anteproyecto</td>
                 <td class="download-icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M8.267 14.68c-.184 0-.308.018-.372.036v1.178c.076.018.171.023.302.023.479 0 .774-.242.774-.651 0-.366-.254-.586-.704-.586zm3.487.012c-.2 0-.33.018-.407.036v2.61c.077.018.201.018.313.018.817.006 1.349-.444 1.349-1.396.006-.83-.479-1.268-1.255-1.268z"></path>
-                      </svg>                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <!-- Otras filas ... -->
             <tr>
                 <td>Carta de digitalización de memoria</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>Documento 3</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>Documento 4</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>Documento 5</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
         </tbody>
@@ -124,7 +124,5 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
 
 @endsection

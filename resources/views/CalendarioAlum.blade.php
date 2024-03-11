@@ -22,7 +22,7 @@
                     <div class="border border-gray-200 py-2">
                         <!-- Solo renderizar si el día está dentro del mes -->
                         {{ $dayToShow }}
-                        <input type="checkbox" class="form-checkbox ml-1 h-5 w-5" /> <!-- Checkbox para marcar asistencia -->
+                        {{-- <input type="checkbox" class="form-checkbox ml-1 h-5 w-5" /> <!-- Checkbox para marcar asistencia --> --}}
                     </div>
                 @endfor
             @endfor
