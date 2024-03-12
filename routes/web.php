@@ -46,12 +46,6 @@ Route::get('/DashboardAlumno', function(){ //Andrea sin cambios
 });
 
 //Vistas ALEX
-Route::get('/donacionLibros', function () { // Lara
-    return view('DonacionLibros');
-});
-Route::get('/calendario', function () { //Alex
-    return view('calendario');
-});
 
 Route::get('/calendarioAsesor', function () { //Alex
     return view('calendarioAsesor');

@@ -61,7 +61,7 @@
 
     <body>
 
-        <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">             Vista de Proyectos           </div>
+        <div class="text-black font-bold border-b border-zinc-400 px-5 py-3 text-xl mx-5">             Vista de Proyectos           </div>
 
 
         <div
