@@ -13,8 +13,7 @@
     </div>
 
     <div class="bg-white p-12 rounded-3xl shadow-md w-full max-w-md relative overflow-hidden z-0">
-
-        <img src="/login.png" alt="Imagen de inicio de sesión" class="w-full h-33 object-cover mt-6 mb-6 rounded">
+    <h3 class="mt-12 text-center font-bold text-2xl">Sistema de Gestión de Estadías</h3>
 		<h3 class="text-gray-400 text-center font-semibold text-lg">Identificate con tu correo y contraseña</h3>
 		<br>
         <form action="#" method="POST" class="flex flex-col"> 
