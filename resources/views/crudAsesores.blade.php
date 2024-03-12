@@ -7,13 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista de Asesores</title>
+    <title>Lista de Asesores - Presidente</title>
 </head>
 <body>
     <main class="p-8">
         {{-- Titulo --}}
         <div class="border-b border-zinc-400 px-5 py-3 font-bold text-2xl mx-5">
-        Lista de Asesores
+        Lista de Asesores - Presidente
         </div>
 
         {{-- Agregar --}}
@@ -22,7 +22,7 @@
                 type="button"
                 class="block mx-20 bg-[#325b87] text-white px-4 py-2 rounded-md hover:bg-[#1e3349] focus:outline-none focus:bg-[#1e3349]"
             >
-            Agregar Nuevo Asesor
+            Agregar Asesor
             </button>
         </div>
 
