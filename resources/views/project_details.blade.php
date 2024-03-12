@@ -34,11 +34,17 @@
     </style>
 </head>
 <body class="bg-gray-100">
+
+    <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">             Detalles Del Proyecto           </div>
+
     <div class="centered-box">
         <div class="container mx-auto p-8">
             <form  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 {{-- <form action="{{ route('submit.project') }}" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"> --}}
                     @csrf
+
+
+                    
                 <div class="mb-4">
                     <h1 class="block text-2xl font-bold mb-2 text-center text-blue-900">Detalles Del Proyecto:</h1>
 

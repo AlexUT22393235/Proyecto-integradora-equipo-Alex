@@ -60,16 +60,29 @@
         .download-icon-pdf {
             color: #e74c3c;
         }
+        .download-icon {
+            margin: 15px; /* Ajusta el margen para separar los iconos */
+            color: #3498db;
+            vertical-align: middle;
+            font-size: 24px; /* Tamaño de fuente más grande */
+        }
+
+        .download-icon-pdf {
+            color: #e74c3c;
+            font-size: 24px; /* Tamaño de fuente más grande */
+        }
     </style>
 </head>
 <body>
-    <div class="font-bold text-zinc-400 border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
-        Documentos del Alumnos
-    </div>
+
+    <br/>
+    <br/>
     <br/>
 
- 
-    
+    <header>
+        Documentos del alumno
+    </header>
+
     <table>
         <thead>
             <tr>
@@ -81,8 +94,8 @@
             <tr>
                 <td>Formato de anteproyecto</td>
                 <td class="download-icon-container">
-                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
-                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
+                    <i class="fas fa-file-word download-icon"></i>
+                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
                 </td>
             </tr>
             <!-- Otras filas ... -->
@@ -117,6 +130,12 @@
         </tbody>
     </table>
 
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+
     <!-- Enlace a los scripts generados por Laravel Mix -->
     <script src="{{ mix('js/app.js') }}"></script>
 
@@ -124,5 +143,3 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
-@endsection

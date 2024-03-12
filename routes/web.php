@@ -9,34 +9,34 @@ Route::resource('documentos', DocumentoController::class);
 
 //Vistas KENIA
 //ruta de crud de documentos vista de presidente
-Route::get('/Admindocs', function () { //Kenia
+Route::get('/Admindocs', function () { 
     return view('Admindocs');
 });
-Route::get('/Direccion', function () { //Rafa
+Route::get('/Direccion', function () { //!Rafa FOOTER
     return view('DashDireccion');
 });
-Route::get('/AdminAsesores', function () {//Mia
+Route::get('/AdminAsesores', function () {//!Mia BOTON
     return view('crudAsesores');
 });
-Route::get('/asesoresyestudiantes', function () {//Mauricio
+Route::get('/asesoresyestudiantes', function () {
     return view('AsesoresEstudiantes');
 });
 
 //VISTAS RICHIE
 
-Route::get('/CrudAsesorDeAdmin', function () { //Richie
+Route::get('/CrudAsesorDeAdmin', function () { //Richie LISTO
     return view('CrudAsesorDeAdmin');
 });
-Route::get('/CrudDireccionDeAdmin', function () {
+Route::get('/CrudDireccionDeAdmin', function () { //Richie LISTO
     return view('CrudDireccionDeAdmin');
 });
-Route::get('/CrudPresidenteDeAdmin', function () {
+Route::get('/CrudPresidenteDeAdmin', function () { //Richie LISTO
     return view('CrudPresidenteDeAdmin');
 });
-Route::get('/permisos', function(){ //Giovanni
+Route::get('/permisos', function(){ //Giovanni sin cambios
     return view('Permisos');
 });
-Route::get('/editarPerfil', function(){//Giovanni
+Route::get('/editarPerfil', function(){// geovani sin cambios
     return view('editarPerfil');
 });
 Route::get('/', function(){ //Andrea
@@ -47,36 +47,36 @@ Route::get('/DashboardAlumno', function(){ //Andrea
 });
 
 //Vistas ALEX
-Route::get('/donacionLibros', function () { // Lara
+Route::get('/donacionLibros', function () { // Lara SE QUITA
     return view('DonacionLibros');
 });
-Route::get('/calendario', function () { //Alex
+Route::get('/calendario', function () { //Alex corregir
     return view('calendario');
 });
-Route::get('/ProyectosAsesor', function () { //Antonino
+Route::get('/ProyectosAsesor', function () { //Antonino  corregir colores de status
     return view('ProyectosAsesor');
 });
-Route::get('/dashboardAsesor', function () { //Ricardo 
+Route::get('/dashboardAsesor', function () { //Ricardo falta implementar iconos
     return view('dashboardAsesor');
 });
 
 
-//Vistas KAREN
+//Vistas KAREN listas
 Route::get('/estudiantesAsesorados', function(){
     return view('AlumnosAsesorados');
 });
-Route::get('/cartasAlumnoAdo', function(){
+Route::get('/cartasAlumnoAdo', function(){ //quitar no se va ocupar pero se va reutilizar
     return view('CartasAlumnoAdo');
 });
-Route::get('/dashboardPresidente', function(){
+Route::get('/dashboardPresidente', function(){ //LISTO
     return view('DashboardPresidente');
 });
-Route::get('/controlProyectoPresidente', function(){
+Route::get('/controlProyectoPresidente', function(){//por confirmar
     return view('ControlProyectoPresidente');
 });
 
 //Vistas JONNY
-Route::get('/docsDireccion', function(){
+Route::get('/docsDireccion', function(){ //por confirmar
     return view('DocsDireccion');
 });
 Route::get('/crudAlumnosAdmin', function(){
@@ -85,24 +85,25 @@ Route::get('/crudAlumnosAdmin', function(){
 Route::get('/dashboardAdmin', function () {
     return view('DashboardAdmin');
 });
-Route::get('/librosAlumno', function () {
+Route::get('/librosAlumno', function () { //por confirmar
     return view('LibrosAlumno');
 });
-Route::get('/controlLibros', function () {
-    return view('controlLibros');
+Route::get('/ControlLibros', function () { //vacioooo
+    return view('ControlLibros');
 });
 
 //Vistas DIEGO
-Route::get('/edicionProyecto', function(){
+Route::get('/edicionProyecto', function(){ //!SE ESTÁ CORRIGIENDO gustavo
     return view('EdicionProyecto');
 });
 
 Route::get('project_details', [ProjectController::class, 'showDetails']);
 
-Route::get('/alumnoDocs', function(){
+Route::get('/alumnoDocs', function(){ //LISTO CHALE
     return view('AlumnoDocs');
 });
 
-Route::get('/CalendarioAlum', function () {
+Route::get('/CalendarioAlum', function(){ //! JUNTAR CON EL CALENDARIO DE ALEX
     return view('CalendarioAlum');
 });
+

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body class="bg-blue-50">
+<body class="bg-[#EEF1F9]">
     <nav style="background-color: #325b87;">
         <div class="flex items-center justify-between p-6">
             <div class="flex items-center space-x-8">

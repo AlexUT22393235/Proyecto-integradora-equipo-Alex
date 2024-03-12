@@ -17,7 +17,7 @@
         </div>
 
         {{-- Agregar --}}
-        <div class="mt-5 max-w-2xl">
+        <div class="mt-5 max-w-2xl" style="margin-left: 930px;">
             <button id="open-modal-btn"
                 type="button"
                 class="block mx-20 bg-[#325b87] text-white px-4 py-2 rounded-md hover:bg-[#1e3349] focus:outline-none focus:bg-[#1e3349]"
