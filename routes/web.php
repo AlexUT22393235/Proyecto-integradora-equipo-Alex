@@ -88,8 +88,8 @@ Route::get('/dashboardAdmin', function () {
 // Route::get('/librosAlumno', function () {
 //     return view('LibrosAlumno');
 // });
-Route::get('/controlLibros', function () {
-    return view('controlLibros');
+Route::get('/ControlLibros', function () {
+    return view('ControlLibros');
 });
 
 //Vistas DIEGO

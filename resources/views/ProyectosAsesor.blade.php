@@ -1,4 +1,4 @@
-@extends('plantillaAsesor')
+@extends('PlantillaAdmin')
 
 @section('content')
     <!DOCTYPE html>
