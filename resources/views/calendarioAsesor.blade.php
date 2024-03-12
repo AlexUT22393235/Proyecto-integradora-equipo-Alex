@@ -25,7 +25,7 @@
                         </div>
                        
 
-                        <div class="py-8">
+                        <div class="py-5">
                             <div class="font-bold text-xl mb-2 text-indigo-700">Citas</div>
                             <p class="p-2">
                                 <span class="text-[#325B87]">Asesorado 1:</span>
@@ -63,7 +63,7 @@
                                     $dayOfMonth = $rowIndex * 7 + $colIndex + 1;
                                     $dayToShow = $dayOfMonth <= 30 ? $dayOfMonth : $dayOfMonth - 30;
                                 @endphp
-                                <div class="border border-gray-200 py-8">
+                                <div class="border border-gray-200 py-5">
                                     <!-- Renderizar solo si el día está dentro del mes -->
                                     {{ $dayToShow }}
                                 </div>
