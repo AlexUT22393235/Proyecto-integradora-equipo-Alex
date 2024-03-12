@@ -45,15 +45,15 @@
             }
 
             .estado-aprobado {
-                color: #00CD08;
+                color: #1a416e;
                 /* Color de texto aprobado */
-                background-color: #E5FEE7;
+                background-color: #b2d7fa;
                 /* Fondo aprobado */
             }
 
             .estado-proceso {
-                color: #CD6200;
-                background-color: #FEF2E5;
+                color: #3e92c2;
+                background-color: #e6f2fc;
             }
         </style>
         <title>Document</title>
