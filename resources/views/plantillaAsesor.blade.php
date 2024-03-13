@@ -17,6 +17,33 @@
     }
 
 </style>
+
+
+<!-- CalendarioRelaciones -->
+<!-- De salir algo mal, retirar todo de esta sección -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          headerToolbar: {
+      start: 'prev,next',
+      center: 'title',
+      end: 'today'
+    },
+    buttonText: {
+      today: 'Hoy' // Cambia el texto del botón "today" a "Hoy"
+    },
+          defaultDay: new Date(2024,3,12),
+          initialView: 'dayGridMonth'
+        });
+        calendar.setOption('locale', 'Es');
+        calendar.render();
+      });
+
+    </script>
+
 </head>
 <body class="bg-blue-50">
   <nav style="background-color: #325b87;">
