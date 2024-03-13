@@ -73,16 +73,14 @@
         }
     </style>
 </head>
-<body>
-
+<body >
+    <div class="font-bold  border-b border-zinc-400 p-8 text-2xl mx-5">
+        Documentos del Alumnos
+    </div>
     <br/>
-    <br/>
-    <br/>
 
-    <header>
-        Documentos del alumno
-    </header>
-
+ <div>
+    
     <table>
         <thead>
             <tr>
@@ -94,8 +92,8 @@
             <tr>
                 <td>Formato de anteproyecto</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                <a href="{{ asset('SGE/public/42709950-EE78-4E74-A05F-6994E2A89DF5_1_105_c.jpeg') }}" download="SGE/public/42709950-EE78-4E74-A05F-6994E2A89DF5_1_105_c.jpeg"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <!-- Otras filas ... -->
@@ -143,3 +141,5 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+@endsection
