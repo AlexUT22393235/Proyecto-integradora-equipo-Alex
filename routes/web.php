@@ -39,10 +39,10 @@ Route::get('/permisos', function(){ //! Corregir diseño
 Route::get('/editarPerfil', function(){//Giovanni LISTO
     return view('editarPerfil');
 });
-Route::get('/', function(){ //Andrea
+Route::get('/', function(){ //Andrea corregir
     return view('Login');
 });
-Route::get('/DashboardAlumno', function(){ //Andrea
+Route::get('/DashboardAlumno', function(){ //Andrea corregir
     return view('DashboardAlumno');
 });
 
@@ -50,13 +50,13 @@ Route::get('/DashboardAlumno', function(){ //Andrea
 Route::get('/donacionLibros', function () { // Lara SE QUITA
     return view('DonacionLibros');
 });
-Route::get('/calendario', function () { //Alex corregir
+Route::get('/calendario', function () { //!  corregir como Villa
     return view('calendario');
 });
-Route::get('/ProyectosAsesor', function () { //Antonino  corregir colores de status
+Route::get('/ProyectosAsesor', function () { //Antonino LISTO
     return view('ProyectosAsesor');
 });
-Route::get('/dashboardAsesor', function () { //Ricardo falta implementar iconos
+Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
     return view('dashboardAsesor');
 });
 
@@ -93,13 +93,13 @@ Route::get('/controlLibros', function () {
 });
 
 //Vistas DIEGO
-Route::get('/edicionProyecto', function(){ //!SE ESTÁ CORRIGIENDO gustavo
+Route::get('/edicionProyecto', function(){ // LISTO Gustavo
     return view('EdicionProyecto');
 });
 
-Route::get('project_details', [ProjectController::class, 'showDetails']);
+Route::get('project_details', [ProjectController::class, 'showDetails']); //Listo Diego
 
-Route::get('/alumnoDocs', function(){ //LISTO CHALE
+Route::get('/alumnoDocs', function(){ //LISTO Chale
     return view('AlumnoDocs');
 });
 

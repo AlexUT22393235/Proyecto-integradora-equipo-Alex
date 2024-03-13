@@ -1,6 +1,3 @@
-@extends('plantilla')
-
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,24 +24,25 @@
         }
 
         .card {
-            max-width: 800px; /* Aumenta el ancho máximo de las cards */
+            max-width: 800px;
         }
 
         .bold-text {
-            font-weight: bold; /* Hice el texto de asesor académico, estatus del proyecto y comentarios más negrita */
+            font-weight: bold;
         }
 
         .number {
-            color: black; /* Hice los números de todas las cards de color negro */
+            color: black;
         }
 
         .comment-input {
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 10px;
             padding: 8px;
-            width: 100%; /* Ancho del 100% para ocupar todo el espacio disponible */
-            min-height: 50px; /* Altura mínima para evitar que el área de texto se haga demasiado pequeña */
-            resize: vertical; /* Permite redimensionar verticalmente el textarea */
+            width: 100%;
+            min-height: 50px;
+            resize: vertical;
+            margin-top: 10px;
         }
 
         .send-button {
@@ -69,44 +67,73 @@
             margin-right: 10px;
         }
 
-        .comment-text {
-            flex-grow: 1;
+        .comment-text,
+        .justification {
             background-color: #f0f2f5;
             padding: 10px;
             border-radius: 10px;
+            margin-top: 10px;
         }
 
-        /* Estilos adicionales para mejorar el diseño */
         .left-card {
-            width: 1000px; /* Ajusta el ancho de la card de la izquierda */
-            background-color: #ffffff; /* Cambia el color de fondo de la card a blanco */
-            padding: 20px; /* Añade un poco de espacio interno */
-            border-radius: 10px; /* Agrega bordes redondeados */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega sombra */
+            width: 1000px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .white-card {
-            background-color: #ffffff; /* Cambia el color de fondo de la tarjeta a blanco */
+            background-color: #ffffff;
         }
 
-        /* Ajusta el margen izquierdo de las tarjetas de asesor académico, estatus del proyecto y comentarios */
         .other-cards {
-            margin-left: 30px; /* Centra las tarjetas */
-            margin-right: auto; /* Centra las tarjetas */
-            display: flex; /* Alinea las tarjetas horizontalmente */
-            justify-content: center; /* Centra las tarjetas horizontalmente */
-            gap: 20px; /* Añade espacio entre las tarjetas */
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
-        /* Quita el color azul de la tarjeta de estatus del proyecto */
         .status-card {
-            background-color: #ffffff; /* Cambia el color de fondo de la tarjeta a blanco */
+            background-color: #ffffff;
         }
 
-        /* Ajusta la anchura y el margen izquierdo de las tarjetas de asesor académico, estatus del proyecto y comentarios */
         .wide-card {
-            width: 530px; /* Ajusta la anchura */
-            padding: 20px; /* Aumenta el espacio interno */
+            width: 550px;
+            padding: 20px;
+        }
+
+        .justify-button {
+            background-color: transparent !important;
+            border: none !important;
+            cursor: pointer;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideOut {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #approval-animation {
+            animation: slideIn 1s forwards, slideOut 1s 2s forwards;
         }
     </style>
 </head>
@@ -118,30 +145,24 @@
         </div>
         <div class="flex-grow mt-5">
             <div class="flex justify-between items-start p-6 ">
-                <!-- Nueva card agregada en el espacio en blanco del lado izquierdo -->
-                <div class="bg-white p-4 text-center rounded-2xl shadow-md card left-card"> <!-- Aplicamos el estilo left-card -->
+                <div class="bg-white p-4 text-center rounded-2xl shadow-md card left-card">
                     <h2 class="text-blue-800 text-lg bold-text">Detalles del Proyecto:</h2>
-
                     <div class="mb-4">
                         <label for="company-name" class="block text-subtitle text-sm font-bold mb-2">Empresa</label>
                         <input type="text" id="company-name" value="Nombre de la empresa" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
-
                     <div class="mb-4">
                         <label for="advisor-name" class="block text-subtitle text-sm font-bold mb-2">Asesor</label>
                         <input type="text" id="advisor-name" value="Rafael Villegas" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
-
                     <div class="mb-4">
                         <label for="project-title" class="block text-subtitle text-sm font-bold mb-2">Título del Proyecto</label>
                         <input type="text" id="project-title" value="Título del proyecto" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
-
                     <div class="mb-4">
                         <label for="career" class="block text-subtitle text-sm font-bold mb-2">Carrera</label>
                         <input type="text" id="career" value="Nombre de la carrera" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
-
                     <div class="flex mb-4 mr-4">
                         <div class="flex-grow mr-4">
                             <label for="start-date" class="block text-subtitle text-sm font-bold mb-2">Inicio</label>
@@ -152,28 +173,23 @@
                             <input type="date" id="end-date" value="2024-12-31" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                         </div>
                     </div>
-
                     <div class="mb-4">
                         <label for="objectives" class="block text-subtitle text-sm font-bold mb-2">1. Objetivo General del Proyecto</label>
                         <textarea id="objectives" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Este es el objetivo general del proyecto.</textarea>
                     </div>
-
                     <div class="mb-4">
                         <label for="problem-statement" class="block text-subtitle text-sm font-bold mb-2">2. Planteamiento del Problema</label>
                         <textarea id="problem-statement" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Este es el planteamiento del problema.</textarea>
                     </div>
-
                     <div class="mb-4">
                         <label for="justification" class="block text-subtitle text-sm font-bold mb-2">3. Justificación</label>
-                        <textarea id="justification" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Esta es la justificación del proyecto.</textarea>
+                        <textarea id="justification" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100 comment-text">Esta es la justificación del proyecto.</textarea>
                     </div>
-
                     <div class="mb-4">
                         <label for="activities" class="block text-subtitle text-sm font-bold mb-2">4. Actividades a realizar</label>
                         <textarea id="activities" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Estas son las actividades a realizar en el proyecto.</textarea>
                     </div>
                 </div>
-                <!-- Fin de la nueva card -->
                 <div class="flex flex-col w-full max-w-lg gap-4 other-cards">
                     <div class="bg-white p-4 text-center rounded-2xl shadow-md card white-card wide-card">
                         <h2 class="text-blue-800 text-lg bold-text">Asesor Académico</h2>
@@ -182,20 +198,63 @@
                     </div>
                     <div class="bg-white p-4 text-center rounded-2xl shadow-md card status-card wide-card">
                         <h2 class="text-blue-800 text-lg bold-text">Estatus del proyecto</h2>
-                        <p>Comentarios: <span class="number">2</span></p>
-                        <p>Votos: <span class="number">3</span></p>
+                        <p style="margin-bottom: 20px;"><strong>Rafael Villegas</strong> ha votado <span class="justify-button bg-blue-800 text-white px-2 py-1 rounded-md shadow-md ml-2">
+                                <img src="https://svgsilh.com/svg/1915455-3f51b5.svg" alt="Ojo" class="h-5 w-5 inline-block" />
+                            </span></p>
+                        <div class="justification hidden bg-gray-200 p-2 mt-2">
+                            Rafael Villegas votó por el proyecto porque cree que tiene un gran potencial para mejorar la calidad de vida de muchas personas en su comunidad.
+                        </div>
+                        <p style="margin-bottom: 20px;"><strong>Fernando Villafalla</strong> ha votado <span class="justify-button bg-blue-800 text-white px-2 py-1 rounded-md shadow-md ml-2">
+                                <img src="https://svgsilh.com/svg/1915455-3f51b5.svg" alt="Ojo" class="h-5 w-5 inline-block" />
+                            </span></p>
+                        <div class="justification hidden bg-gray-200 p-2 mt-2">
+                            Fernando Villafalla votó por el proyecto porque considera que es una oportunidad única para impulsar el desarrollo económico local.
+                        </div>
                         <button class="bg-blue-800 text-white px-4 py-2 rounded-xl shadow-lg flex items-center justify-center mx-auto vote-button">
-                            <span class="text-lg mr-2">❤️</span> Votar
+                            <span class="text-lg mr-2"></span> Votar
                         </button>
+                        <div id="vote-counter" class="text-right text-gray-600 mt-4" style="position: absolute; bottom: 10px; right: 10px;">Total de votos: 0</div>
+                        <div id="approval-animation" class="hidden absolute top-0 left-0 w-full h-full flex justify-center items-center bg-green-500 text-white text-4xl font-bold">
+                            PROYECTO APROBADO
+                        </div>
                     </div>
+
+                    <script>
+                        // Contador de votos
+                        let voteCount = 0;
+                        const voteButton = document.querySelector('.vote-button');
+                        const voteCounter = document.getElementById('vote-counter');
+                        const approvalAnimation = document.getElementById('approval-animation');
+
+                        voteButton.addEventListener('click', () => {
+                            voteCount++;
+                            voteCounter.textContent = Total de votos: ${voteCount};
+
+                            if (voteCount === 3) {
+                                voteButton.disabled = true; // Desactivar el botón después del tercer voto
+                                approvalAnimation.classList.remove('hidden'); // Mostrar la animación de aprobación
+                                setTimeout(() => {
+                                    approvalAnimation.classList.add('hidden'); // Ocultar la animación después de 3 segundos
+                                }, 3000);
+                            }
+                        });
+
+                        // Mostrar justificación al hacer clic en el botón "Ver Justificación"
+                        const justifyButtons = document.querySelectorAll('.justify-button');
+                        justifyButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                const justification = button.parentElement.nextElementSibling;
+                                justification.classList.toggle('hidden');
+                            });
+                        });
+                    </script>
+
                     <div class="bg-white p-4 text-center rounded-2xl shadow-md card white-card wide-card">
                         <h2 class="text-blue-800 text-lg bold-text">Comentarios:</h2>
                         <div class="comment-container">
                             <div>
-                                <p class="flex items-center bold-text"> <!-- Ajustamos el estilo del nombre -->
-                                    <span class="comment-name">Edwin Turcatti</span> <!-- Añadimos una clase para el nombre -->
-                  
-
+                                <p class="flex items-center bold-text">
+                                    <span class="comment-name">Edwin Turcatti</span>
                                 </p>
                                 <p class="comment-text">Este es un comentario de ejemplo.</p>
                             </div>
@@ -213,7 +272,31 @@
             </div>
         </div>
     </div>
+
+    <!-- Confirmation Form -->
+    <div class="confirmation-form hidden">
+        <h3>¿Estás seguro de votar el proyecto?</h3>
+        <label for="justification">Escribir justificación:</label>
+        <textarea id="justification" class="rounded-md"></textarea>
+        <button class="confirm">Sí</button>
+        <button class="cancel">No</button>
+    </div>
+
+    <script>
+        // Mostrar el formulario de confirmación al hacer clic en el botón de votar
+        const voteButton = document.querySelector('.vote-button');
+        const confirmationForm = document.querySelector('.confirmation-form');
+        const cancelButton = confirmationForm.querySelector('.cancel');
+
+        voteButton.addEventListener('click', () => {
+            confirmationForm.classList.remove('hidden');
+        });
+
+        // Ocultar el formulario de confirmación al hacer clic en el botón de cancelar
+        cancelButton.addEventListener('click', () => {
+            confirmationForm.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>
-@endsection

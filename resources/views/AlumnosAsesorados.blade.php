@@ -1,4 +1,4 @@
-@extends('plantillaPresidente')
+@extends('plantillaAsesor')
 @section('content')
 <!DOCTYPE html>
 <html lang="en">
@@ -6,13 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modulo 4</title>
+    <title>Alumnos asesorados
+</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <div class="p-8">
 <body style="background-color: #EEF1F9">
   <div class="font-bold text-black border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
-    Control de proyectos
+    Alumnos asesorados
 </div>
   <div class="mt-10 justify-center">
     <div class="flex flex-wrap justify-center mb-8">

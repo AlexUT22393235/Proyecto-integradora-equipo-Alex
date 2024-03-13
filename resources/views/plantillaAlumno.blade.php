@@ -6,18 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <style>
+<style>
 
-footer{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #325B87; /* Color de fondo */
-        text-align: left; /* Alineación del texto */
-        color: white; /* Color del texto */
-    }
 
-</style>
+  footer{
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: #325B87; /* Color de fondo */
+          text-align: left; /* Alineación del texto */
+          color: white; /* Color del texto */
+      }
+  </style>
 </head>
 <body class="bg-blue-50">
   <nav style="background-color: #325b87;">
@@ -28,35 +28,37 @@ footer{
             </a>
 
             <div class="font-semibold space-x-9">
-                <a href="asesoresyestudiantes">
-                  <button class="text-white">Asesores-Estudiantes</button>
+                <a href="DashboardAlumno">
+                  <button class="text-white">Dashboard</button>
                 </a>
                 
-                <a href="AdminAsesores">
-                  <button class="text-white">Asesores</button>
+                <a href="project_details">
+                  <button class="text-white">Proyecto</button>
               </a>
-                <a href="Admindocs">
-                    <button class="text-white">Documentos</button>
+                <a href="edicionProyecto">
+                    <button class="text-white">Edición proyecto</button>
                 </a>
-                <a href="Direccion">
-                  <button class="text-white">Direccion</button>
+                <a href="CalendarioAlum">
+                  <button class="text-white">Calendario</button>
               </a>
+              <a href="alumnoDocs">
+                <button class="text-white">Documentos</button>
+            </a>
+            
               
             </div>
         </div>
 
-        <div class="flex items-center">
-            <input type="text" placeholder="Buscar..." class="p-2 mr-4 bg-white rounded-md">
-        </div>
+    
     </div>
 </nav>
    <main>
     @yield('content')
    </main>
-   <footer class=" p-2 text-white">
-    <div class="container mx-auto flex items-center">
-        <p class="mr-auto ml-4">Copyright Universidad Tecnológica de Cancún © 2024</p>
-    </div>
+   <footer>
+    <div class='bg-[#325B87] w-full mb-0 h-10 '>
+        <p class='text-[#F8F8F8] text-left ml-5 p-2 inter-variacion'>Copyright Universidad Tecnológica de Cancún © 2024</p>
+      </div>
 </footer>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaAlumno')
 
 @section('content')
 <!DOCTYPE html>

@@ -64,7 +64,7 @@
         </div>
     </main>
 
-    <div id="modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
+    <div id="modal" class="fixed inset-0  items-center justify-center z-10 hidden">
         <div class="absolute inset-0 bg-black opacity-75 modal-overlay" onclick="closeModal()"></div>
         <div class="bg-white p-8 rounded-lg z-20 modal-container w-96">
             <!-- Ajuste del ancho del modal -->

@@ -45,27 +45,27 @@
             }
 
             .estado-aprobado {
-                color: #00CD08;
+                color: #1a416e;
                 /* Color de texto aprobado */
-                background-color: #E5FEE7;
+                background-color: #b2d7fa;
                 /* Fondo aprobado */
             }
 
             .estado-proceso {
-                color: #CD6200;
-                background-color: #FEF2E5;
+                color: #3e92c2;
+                background-color: #e6f2fc;
             }
         </style>
-        <title>Document</title>
+        <title>Proyectos - Asesor</title>
     </head>
 
     <body>
-
-        <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">             Vista de Proyectos           </div>
+<div class="p-8">
+        <div class="text-black font-bold border-b border-zinc-400 px-5 py-3 text-2xl mx-5">             Proyectos           </div>
 
 
         <div
-            class="mt-5 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
+            class="mt-8 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
             <table class="w-full table-auto bg-gray-200 rounded-t-lg">
                 <thead class="text-center text-white bg-[#325b87]">
                     <tr>

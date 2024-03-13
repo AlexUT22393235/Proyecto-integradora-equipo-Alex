@@ -1,9 +1,9 @@
-@extends('plantilla')
+@extends('plantillaPresidente')
 
 @section('content')
 <div class="p-8">
     <div class="font-bold text-black border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
-        Control Documentos - Administrador
+        Control Documentos 
     </div>
     <button id="addDocumentButton"  style="margin-left: 670px;" class="px-8 py-2 bg-sge text-white rounded-xl shadow-lg m-9 ml-auto" onclick="openModal()">Agregar Documento</button>
 <div class="flex flex-col items-start justify-center">
@@ -11,7 +11,7 @@
     <div class="mb-4">
     </div>
     <div class="overflow-x-auto w-full flex justify-center">
-    <table class="rounded-t-lg shadow-lg text-sm md:text-base">
+    <table class="rounded-t-lg shadow-lg text-sm md:text-base bg-white">
             <thead class="bg-sge text-white">
                 <tr>
                     <th class="px-10 py-4">Documento</th>
@@ -89,7 +89,7 @@
 </div>
 
 <!-- Modal para agregar nuevo documento -->
-<div id="modalAgregarDocumento" class="hidden fixed inset-0 flex items-center justify-center z-10">
+<div id="modalAgregarDocumento" class=" fixed inset-0 flex items-center justify-center z-10">
     <div class="absolute inset-0 bg-black opacity-75" onclick="closeModal()"></div>
     <div class="bg-white p-8 rounded-lg z-20">
         <h2 class="text-lg font-bold mb-4" >Agregar Nuevo Documento</h2>

@@ -9,19 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body class="bg-[#EEF1F9]">
-    <nav style="background-color: #325b87;">
-        <div class="flex items-center justify-between p-6">
-            <div class="flex items-center space-x-8">
+<body class="bg-[#EEF1F9] flex flex-col min-h-screen">
+    <div class="flex-grow">
+        <nav style="background-color: #325b87;">
+            <div class="flex items-center justify-between p-6">
                 <a href="/dashboardAdmin">
-                    <img src="https://github.com/AlexUT22393235/Proyecto-integradora-equipo-Alex/blob/integracion/public/images/logo.png?raw=true" alt="Logo"
-                        class="w-auto mr-20 h-9 max-w-32">
+                    <img src="https://github.com/AlexUT22393235/Proyecto-integradora-equipo-Alex/blob/integracion/public/images/logo.png?raw=true"
+                        alt="Logo" class="w-auto h-9 max-w-32">
                 </a>
 
-                <div class="font-semibold space-x-9">
-                    <a href="/ProyectosAsesor">
-                        <button class="text-white">Proyectos</button>
-                    </a>
+                <div class="font-semibold space-x-9 flex items-center ml-6">
                     <a href="/CrudAsesorDeAdmin">
                         <button class="text-white">Asesores</button>
                     </a>
@@ -38,31 +35,33 @@
                         <button class="text-white">Permisos</button>
                     </a>
                 </div>
-            </div>
 
-            <div class="relative group">
-                <button id="userDropdown" class="focus:outline-none">
-                    <img src='/user.png' class='h-[40%] w-[40%] items-center' alt="user" />
-                </button>
+                <div class="relative group ml-auto">
+                    <button id="userDropdown" class="focus:outline-none">
+                        <img src='/user.png' class='h-10 w-10' alt="user" />
+                    </button>
 
-                <div id="userDropdownContent" class="absolute right-0 hidden mt-2 w-48 bg-white border rounded-md shadow-lg">
-                    <a href="/editarPerfil"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300">Editar
-                        Perfil</a>
-                    <a href="/"
-                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300">Cerrar
-                        Sesión</a>
+                    <div id="userDropdownContent"
+                        class="absolute right-0 hidden mt-2 w-48 bg-white border rounded-md shadow-lg">
+                        <a href="/editarPerfil"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300">Editar
+                            Perfil</a>
+                        <a href="/"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition duration-300">Cerrar
+                            Sesión</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <main>
-        @yield('content')
-    </main>
-    <footer>
+        <main>
+            @yield('content')
+        </main>
+    </div>
+
+    <footer class="mt-auto">
         <div class='bg-[#325B87] w-full mb-0 h-10 '>
-            <p class='text-[#F8F8F8] text-left ml-5 p-2 inter-variacion'>Copyright Universidad Tecnológica de
+            <p class='text-[#F8F8F8] text-left ml-5 p-2 inter-variacion'>Copyright Universidad Tecnológica de
                 Cancún © 2024</p>
         </div>
     </footer>

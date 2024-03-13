@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaAlumno')
 
 @section('content')
 <div class="max-w-md mx-auto mt-10">
