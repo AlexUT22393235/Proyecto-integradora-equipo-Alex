@@ -1,51 +1,8 @@
-@vite('resources/css/app.css')
+@extends('plantillaAlumno')
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dashboard Alumno</title>
-</head>
-
-<style>
-  footer{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #325B87; /* Color de fondo */
-        text-align: left; /* Alineación del texto */
-        color: white; /* Color del texto */
-    }
-
-</style>
-
-<body>
+@section( 'content')
 
   <main>
-    <div class="w-full bg-[#325B87] flex flex-row p-3">
-      <a href="/">
-        <img src="https://github.com/AlexUT22393235/Proyecto-integradora-equipo-Alex/blob/integracion/public/images/logo.png?raw=true" alt="Logo" class="w-auto mr-20 h-9 max-w-32">
-    </a>
-        <div class="flex flex-row m-auto text-[#F8F8F8] gap-7 mr-4 inter-variacion ">
-            <h3 class="m-auto div__ul-li">
-                Gestión de estadias
-            </h3>
-            <h3 class="m-auto div__ul-li">
-                Proyecto
-            </h3>
-            <h3 class="m-auto div__ul-li">
-                Calendario
-            </h3>
-            <h3 class="m-auto div__ul-li">
-                Documentos
-            </h3>
-            <img src='/user.png' class='h-[10%] w-[10%] items-center' alt="user" />
-        </div>
-        <div class="flex-item user-img"></div>
-    </div>
 
     <div class="bg-blue-50 h-[83%]">
         <Title titulo="Sistema de Gestión de Estadías"></Title>
@@ -158,13 +115,6 @@
         </div>
     </div>
 </main>
-<footer>
-    <div class='bg-[#325B87] w-full mb-0 h-10 '>
-        <p class='text-[#F8F8F8] text-left ml-5 p-2 inter-variacion'>Copyright Universidad Tecnológica de Cancún ©
-            2024</p>
-    </div>
-</footer>
-
-</body>
-
 </html>
+
+@endsection

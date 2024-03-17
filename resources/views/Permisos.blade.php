@@ -1,5 +1,5 @@
 @vite('resources/css/app.css')
-@extends('plantilla')
+@extends('PlantillaAdmin')
 
 @section('content')
 <!DOCTYPE html>
@@ -11,30 +11,30 @@
     <title>Editar Permisos</title>
 </head>
 <body>
-    <main>
-        
-        <div class="bg-[#7ea3ca]">
-
-            <h1 class="text-3xl font-bold text-center text-white">Editar Permisos</h1>
+<main class="p-8">
+        {{-- Titulo --}}
+        <div class="border-b border-zinc-400 px-5 py-3 font-bold text-2xl mx-5">
+        Lista de Asesores
         </div>
 
-        <div class="mt-5 mx-auto max-w-2xl">
-            <button
+        {{-- Agregar --}}
+        <div class="mt-5 max-w-2xl" style="margin-left: 990px;">
+            <button id="open-modal-btn"
                 type="button"
-                class="block mx-10 bg-[#325b87] text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+                class="block mx-20 bg-[#325b87] text-white px-4 py-2 rounded-md hover:bg-[#1e3349] focus:outline-none focus:bg-[#1e3349]"
             >
-            Buscar docente 
+            Buscar Asesor
             </button>
         </div>
+
+        
 
         <div class="mt-5 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
             <table class="w-full table-auto bg-gray-200 rounded-t-lg">
                 <thead class="text-center text-white bg-[#325b87]">
                     <tr>
-                        <th class="p-2">ID</th>
-                        <th class="p-2">Nomina</th>
                         <th class="p-2">Division</th>
-                        <th class="p-2">Docente</th>
+                        <th class="p-2">Usuario</th>
                         <th class="p-2">Asignacion</th>
                         <th class="p-2">Estatus</th>
                         <th class="p-2">Acciones</th>
@@ -43,8 +43,6 @@
                 <tbody class="text-center bg-white">
                     @foreach(range(1, 10) as $index)
                         <tr>
-                            <td>{{ $index }}</td>
-                            <td>Nomina {{ $index }}</td>
                             <td>Tecnológias de la Información</td>
                             <td>Docente {{ $index }}</td>
                             <td>

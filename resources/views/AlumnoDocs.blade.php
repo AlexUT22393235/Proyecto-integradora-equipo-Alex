@@ -1,3 +1,7 @@
+@extends('plantillaAlumno')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,13 +21,6 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-        }
-
-        header {
-            background-color: #0D476D;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
         }
 
         table {
@@ -63,18 +60,27 @@
         .download-icon-pdf {
             color: #e74c3c;
         }
+        .download-icon {
+            margin: 15px; /* Ajusta el margen para separar los iconos */
+            color: #3498db;
+            vertical-align: middle;
+            font-size: 24px; /* Tamaño de fuente más grande */
+        }
+
+        .download-icon-pdf {
+            color: #e74c3c;
+            font-size: 24px; /* Tamaño de fuente más grande */
+        }
     </style>
 </head>
-<body>
-
+<body >
+    <div class="font-bold  border-b border-zinc-400 p-8 text-2xl mx-5">
+        Documentos del Alumnos
+    </div>
     <br/>
-    <br/>
-    <br/>
 
-    <header>
-        Documentos del alumno
-    </header>
-
+ <div>
+    
     <table>
         <thead>
             <tr>
@@ -86,41 +92,47 @@
             <tr>
                 <td>Formato de anteproyecto</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                <a href="{{ asset('SGE/public/42709950-EE78-4E74-A05F-6994E2A89DF5_1_105_c.jpeg') }}" download="SGE/public/42709950-EE78-4E74-A05F-6994E2A89DF5_1_105_c.jpeg"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <!-- Otras filas ... -->
             <tr>
                 <td>Carta de digitalización de memoria</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>Documento 3</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>Documento 4</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
             <tr>
                 <td>Documento 5</td>
                 <td class="download-icon-container">
-                    <i class="fas fa-file-word download-icon"></i>
-                    <i class="fas fa-file-pdf download-icon download-icon-pdf"></i>
+                    <a href="https://ejemplo.com/archivo_word"><i class="fas fa-file-word download-icon"></i></a>
+                    <a href="https://ejemplo.com/archivo_pdf"><i class="fas fa-file-pdf download-icon download-icon-pdf"></i></a>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
 
     <!-- Enlace a los scripts generados por Laravel Mix -->
     <script src="{{ mix('js/app.js') }}"></script>
@@ -129,3 +141,5 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+@endsection

@@ -7,21 +7,20 @@
   @vite('resources/css/app.css')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
+
+
   footer{
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #325B87; /* Color de fondo */
-        text-align: left; /* Alineación del texto */
-        color: white; /* Color del texto */
-    }
-
-</style>
-
-
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: #325B87; /* Color de fondo */
+          text-align: left; /* Alineación del texto */
+          color: white; /* Color del texto */
+      }
+  </style>
 <!-- CalendarioRelaciones -->
 <!-- De salir algo mal, retirar todo de esta sección -->
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -43,7 +42,7 @@
       });
 
     </script>
-
+  
 </head>
 <body class="bg-blue-50">
   <nav style="background-color: #325b87;">
@@ -55,20 +54,20 @@
 
             <div class="font-semibold space-x-9">
                 <a href="dashboardAsesor">
-                  <button class="text-white">Dashboard Asesor</button>
+                  <button class="text-white">Dashboard</button>
                 </a>
                 
                 <a href="calendarioAsesor">
                   <button class="text-white">Calendario</button>
               </a>
                 <a href="ProyectosAsesor">
-                    <button class="text-white">Vista de Proyectos</button>
+                    <button class="text-white">Proyectos</button>
                 </a>
                 <a href="estudiantesAsesorados">
-                  <button class="text-white">Control Asesorados</button>
+                  <button class="text-white">Asesorados</button>
               </a>
               <a href="cartasAlumnoAdo">
-                <button class="text-white">Control Cartas</button>
+                <button class="text-white">Documentos</button>
             </a>
               
             </div>
@@ -80,10 +79,10 @@
    <main>
     @yield('content')
    </main>
-     <footer class=" p-2 text-white">
-        <div class="container mx-auto flex items-center">
-            <p class="mr-auto ml-4">Copyright Universidad Tecnológica de Cancún © 2024</p>
-        </div>
-    </footer> 
+   <footer>
+    <div class='bg-[#325B87] w-full mb-0 h-10 '>
+        <p class='text-[#F8F8F8] text-left ml-5 p-2 inter-variacion'>Copyright Universidad Tecnológica de Cancún © 2024</p>
+      </div>
+</footer>
 </body>
 </html>

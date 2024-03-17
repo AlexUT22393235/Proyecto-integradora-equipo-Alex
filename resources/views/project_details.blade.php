@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaAlumno')
 
 @section('content')
 <!DOCTYPE html>
@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
     <style>
         /* Estilos CSS */
+
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        
         .input-field {
             border-color: transparent;
-            border-bottom-color: #CBD5E0;
+            border-bottom-color: #f0f0f0;
             border-width: 1px;
         }
         .centered-box {
             width: 900px;
-            background-color: #f2f2f2;
+            /* background-color: #f0f0f0; */
             border-radius: 10px;
             padding: 20px;
             margin: 0 auto;
@@ -55,15 +62,21 @@
                         <input type="text" id="career" value="{{ $career }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
 
-                    <div class="mb-4">
-                        <label for="start-date" class="block text-subtitle text-sm font-bold mb-2">Inicio</label>
-                        <input type="date" id="start-date" value="{{ $startDate }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+
+
+                    <div class="flex mb-4 mr-4">
+                        <div class="flex-grow mr-4">
+                            <label for="start-date" class="block text-subtitle text-sm font-bold mb-2">Inicio</label>
+                            <input type="date" id="start-date" value="{{ $startDate }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        </div>
+                        <div class="flex-grow">
+                            <label for="end-date" class="block mb-2 text-sm font-bold text-subtitle">Final</label>
+                            <input type="date" id="end-date" value="{{ $endDate }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label for="end-date" class="block text-subtitle text-sm font-bold mb-2">Fin</label>
-                        <input type="date" id="end-date" value="{{ $endDate }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
-                    </div>
+
+
 
                     <div class="mb-4">
                         <label for="objectives" class="block text-subtitle text-sm font-bold mb-2">1. Objetivo General del Proyecto</label>

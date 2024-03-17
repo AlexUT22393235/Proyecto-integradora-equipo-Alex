@@ -18,10 +18,10 @@
     </style>
 </head>
 
-<body class="bg-blue-50">
-    <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">
-        Editar Perlfil
-      </div>
+<main class="p-8">
+        {{-- Titulo --}}
+        <div class="border-b border-zinc-400 px-5 py-3 font-bold text-2xl mx-5">
+Editar Perfil        </div>
       <br>
       <br>
     <div class="flex justify-center items-center h-100">
@@ -90,4 +90,4 @@
 </body>
 
 </html>
-@endsection
+@endsection 
