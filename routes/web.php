@@ -13,6 +13,7 @@ Route::get('/Admindocs', function () {
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //!Rafa FOOTER
+    
     return view('DashDireccion');
 });
 Route::get('/AdminAsesores', function () {//!Mia BOTON
