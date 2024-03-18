@@ -9,6 +9,15 @@
 
             <div class="text-black font-bold border-b border-zinc-400 px-5 py-3 text-xl mx-5">Calendario</div>
 
+            <!-- <div class="flex mt-5 justify-end">
+            <button id="open-modal-btn"
+                type="button"
+                class="block mx-20 bg-sge text-white px-4 py-2 rounded-md hover:bg-[#1e3349] focus:outline-none focus:bg-[#1e3349]"
+            >
+            Agregar actividad
+            </button>
+        </div> -->
+
 
             <div class="flex p-4">
                 <!-- Card "Mis tareas" -->
@@ -53,8 +62,82 @@
                 
     <!-- Contenido del calendario aquí -->
 </div>
+
+<div id="modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
+        <div class="absolute inset-0 bg-black opacity-75 modal-overlay" onclick="closeModal()"></div>
+        <div class="bg-white p-8 rounded-lg z-20 modal-container w-96"> <!-- Ajuste del ancho del modal -->
+            <span id="close-modal-btn" class="close absolute top-0 right-0 p-4">&times;</span>
+            <h2 class="text-lg font-bold mb-4">Nuevo Asesor</h2>
+            <form" class="mt-5 p-5 border border-gray-200 rounded-lg bg-gray-100">
+                @csrf <!-- Agrega esto para proteger contra CSRF -->
+                
+                <div class="mb-4">
+                    <label for="nomina" class="block text-sm font-medium text-gray-700">Nomina</label>
+                    <input type="text" id="nomina" name="nomina" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                </div>
+                
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Division</label>
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option selected>Choose a country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                </select>
+                
+                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estatus</label>
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option selected>Choose a country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                </select>
+                
+                <div class="flex justify-end mt-3">
+                    <button type="submit" class="px-4 py-2 bg-sge text-white rounded-lg">Guardar</button>
+                    <button type="button" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg ml-4" onclick="closeModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    <!-- JavaScript para controlar el modal -->
+    <script>
+        // Función para abrir el modal
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Evento para abrir el modal cuando se hace clic en el botón "Agregar nuevo Directivo"
+        document.getElementById('open-modal-btn').addEventListener('click', openModal);
+
+        // Evento para cerrar el modal cuando se hace clic en el botón de cierre
+        document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+
+        // Evento para cerrar el modal cuando se hace clic en el botón "Cancelar"
+        document.getElementById('cancel-modal-btn').addEventListener('click', closeModal);
+    </script>
                 <!-- Aquí puedes incluir la referencia a los scripts necesarios, por ejemplo, para Tailwind CSS y otros -->
     </body>
+
+
 
     </html>
 @endsection

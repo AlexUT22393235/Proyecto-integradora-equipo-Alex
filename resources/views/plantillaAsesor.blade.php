@@ -27,13 +27,31 @@
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
           headerToolbar: {
-      start: 'prev,next',
+      start: 'prev,next deleteActivities',
       center: 'title',
-      end: 'today'
+      end: 'today dayGridMonth,timeGridWeek'
     },
+    customButtons:{
+      deleteActivities:{
+        text:'Limpiar',
+      
+        click:function(){
+          $('#modal')
+          console.log("Se han borrado las actividades")
+        }
+      }
+    },
+
+    dateClick:function(info){
+      alert("Holaa")
+    },
+
     buttonText: {
-      today: 'Hoy' // Cambia el texto del botón "today" a "Hoy"
+      today: 'Hoy', // Cambia el texto del botón "today" a "Hoy"
+      dayGridMonth: 'Mes',
+      timeGridWeek: 'Semana'
     },
+    
           defaultDay: new Date(2024,3,12),
           initialView: 'dayGridMonth'
         });
