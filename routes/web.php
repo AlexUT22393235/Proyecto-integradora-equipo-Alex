@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
+
+use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
 
@@ -107,3 +110,7 @@ Route::get('/alumnoDocs', function(){ //LISTO Chale
 Route::get('/CalendarioAlum', function () {
     return view('CalendarioAlum'); //! JUNTAR CON EL CALENDARIO DE ALEX
 });
+
+//! RUTA CRUD DE ADMIN ASESOR CONTROLADOR ---> RICHI EQUIPO
+Route::resource('CrudAsesorDeAdmin', AsesorController::class);  
+ 
