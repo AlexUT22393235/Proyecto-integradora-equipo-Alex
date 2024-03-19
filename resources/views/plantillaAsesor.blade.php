@@ -43,8 +43,35 @@
     },
 
     dateClick:function(info){
-      alert("Holaa")
+      openModal();
+      console.log(info);
+      calendar.addEvent({title:"X", date:info.dateStr});
+      
     },
+
+    eventClick:function(info){
+      alert('Título: ' + info.event.title + ' Descripcion: ' + info.event.extendedProps.descripcion);
+      // alert('Descripcion: ' + info.event.extendedProps.descripcion);
+
+    },
+
+    events: [
+    {
+        title: "X",
+        start: "2024-03-12T13:00:00", // Updated to ISO 8601 format,
+        end:"2024-03-13T13:00:00"
+    },
+    {
+        title: "Y",
+        start: "2024-03-14T13:00:00", // Updated to ISO 8601 format,
+        end:"2024-03-15T13:00:00",
+        descripcion:"Descripcion"
+
+    }
+    
+],
+    eventColor: 'rgb(50, 91, 135)',
+    
 
     buttonText: {
       today: 'Hoy', // Cambia el texto del botón "today" a "Hoy"
