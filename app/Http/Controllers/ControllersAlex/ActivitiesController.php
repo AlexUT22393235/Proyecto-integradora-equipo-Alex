@@ -7,5 +7,5 @@ use Illuminate\Http\Request;
 
 class ActivitiesController extends Controller
 {
-    //
+    //Esto es el controlador
 }
