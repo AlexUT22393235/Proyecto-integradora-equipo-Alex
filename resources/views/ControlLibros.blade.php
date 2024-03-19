@@ -102,71 +102,84 @@ th {
 <body>
 
     <div class="border-b border-black px-5 py-3 font-bold text-2xl mx-5">
-Control de Libros      </div>
-<br>
-<div class="Tabla">
-    <div class="export-buttons">
-        <button onclick="copyTable()">Copiar</button>
-        <button onclick="exportCSV()">CSV</button>
-        <button onclick="exportExcel()">Excel</button>
-        <button onclick="exportPDF()">PDF</button>
-        <button onclick="printTable()">Imprimir</button>
+        Control de Libros
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre del libro</th>
-                <th>Colaboradores</th>
-                <th>Matrículas</th>
-                <th>Precio del libro</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Historia del Cine</td>
-                <td>Jorge Negrete<br>Cantinflas</td>
-                <td>22304958<br>22304959</td>
-                <td>$200</td>
-            </tr>
-            <tr>
-                <td>La Revolución Mexicana</td>
-                <td>Miguel Hidalgo<br>Josefa Ortiz</td>
-                <td>22305000<br>22305001</td>
-                <td>$150</td>
-            </tr>
-            <tr>
-                <td>El Arte de la Guerra</td>
-                <td>Sun Tzu<br>Confucio</td>
-                <td>22304960<br>22304961</td>
-                <td>$300</td>
-            </tr>
-            <tr>
-                <td>Cien Años de Soledad</td>
-                <td>Gabriel García Márquez</td>
-                <td>22304962</td>
-                <td>$350</td>
-            </tr>
-            <tr>
-                <td>Don Quijote de la Mancha</td>
-                <td>Miguel de Cervantes</td>
-                <td>22304963</td>
-                <td>$400</td>
-            </tr>
-            <tr>
-                <td>La Iliada</td>
-                <td>Homero</td>
-                <td>22304964</td>
-                <td>$250</td>
-            </tr>
-            <tr>
-                <td>El Principito</td>
-                <td>Antoine de Saint-Exupéry</td>
-                <td>22304965</td>
-                <td>$100</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <br>
+    <div class="Tabla">
+        <div class="export-buttons">
+            <button id="copyButton">Copiar</button>
+            <button id="excelButton">Excel</button>
+            <button id="printButton">Imprimir</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del libro</th>
+                    <th>SMB</th>
+                    <th>URL del Ticket</th>
+                    <th>Precio del libro</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($libros as $libro)
+                <tr>
+                    <td>{{ $libro->nombre }}</td>
+                    <td>{{ $libro->smb }}</td>
+                    <td>{{ $libro->url_ticket }}</td>
+                    <td>{{ $libro->precio }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Configurar Clipboard.js para copiar la tabla al portapapeles
+            var clipboard = new ClipboardJS('#copyButton', {
+                text: function () {
+                    var table = document.querySelector('table');
+                    var text = '';
+                    table.querySelectorAll('tr').forEach(function (row) {
+                        row.querySelectorAll('td').forEach(function (cell) {
+                            text += cell.textContent + '\t';
+                        });
+                        text += '\n';
+                    });
+                    return text;
+                }
+            });
+
+            clipboard.on('success', function (e) {
+                if (confirm('¡Tabla copiada!, puedes verlo en tu portapapeles')) {
+                    e.clearSelection();
+                }
+            });
+
+            // Función para exportar la tabla a Excel
+            function exportExcel() {
+                var wb = XLSX.utils.table_to_book(document.querySelector('table'), { sheet: "Sheet JS" });
+                XLSX.writeFile(wb, 'tabla.xlsx');
+            }
+
+            // Manejar eventos de clic en los botones
+            document.getElementById('excelButton').addEventListener('click', function () {
+                if (confirm('¿Estás seguro que deseas descargar la tabla en formato Excel?')) {
+                    exportExcel();
+                }
+            });
+
+            // Manejar evento de clic en el botón "Imprimir"
+            document.getElementById('printButton').addEventListener('click', function () {
+                if (confirm('¿Estás seguro que deseas imprimir la tabla?')) {
+                    window.print();
+                }
+            });
+        });
+    </script>
 
 </body>
 

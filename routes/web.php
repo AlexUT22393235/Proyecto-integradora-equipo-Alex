@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ControllerJonny\LibrosController;
+
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
 
@@ -88,9 +90,8 @@ Route::get('/dashboardAdmin', function () {
 // Route::get('/librosAlumno', function () {
 //     return view('LibrosAlumno');
 // });
-Route::get('/ControlLibros', function () {
-    return view('ControlLibros');
-});
+Route::get('/ControlLibros', [LibrosController::class, 'mostrarLibros']);
+
 
 //Vistas DIEGO
 Route::get('/edicionProyecto', function(){ //!SE ESTÁ CORRIGIENDO gustavo
