@@ -18,9 +18,9 @@ class AsesorRequest extends FormRequest
             'apellidos' => 'nullable|string|max:50',
             'identificador' => 'required|string|max:20',
             'contrasena' => 'required|string',
-            'tipo_usuario_id' => 'required|integer',
-            'division_id' => 'required|integer|exists:divisiones,id',
-            'estado_id' => 'required|integer|exists:estados,id'
+            'tipo' => 'required|integer|exists:tipo_usuarios,id_tipo_usuario',
+            'nombre' => 'required|integer|exists:divisiones,id_division',
+            'estado' => 'required|integer|exists:estados,id_estado'
         ];
     }
 

@@ -6,6 +6,9 @@ use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
 
 use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+use App\Http\Controllers\AdminControllers\DireccionController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+
 
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
@@ -112,5 +115,9 @@ Route::get('/CalendarioAlum', function () {
 });
 
 //! RUTA CRUD DE ADMIN ASESOR CONTROLADOR ---> RICHI EQUIPO
-Route::resource('CrudAsesorDeAdmin', AsesorController::class);  
- 
+Route::resource('CrudAsesorDeAdmin', AsesorController::class);
+Route::resource('CrudDireccionDeAdmin', DireccionController ::class);
+Route::resource('CrudPresidenteDeAdmin', PresidenteController ::class);
+
+
+

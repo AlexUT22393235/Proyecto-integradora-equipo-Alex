@@ -3,16 +3,15 @@
 namespace App\Models\ModelsAdmin; //!IMPORTAR RUTA DE EL MODELO
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 
 
-
-class AsesorAdmin extends Model
+class PresidenteAdmin extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, HasApiTokens, Notifiable;
 
     protected $table = 'usuarios';
     protected $fillable = [
@@ -31,5 +30,4 @@ class AsesorAdmin extends Model
     {
         $this->attributes['contrasena'] = Hash::make($value);
     }
-    
 }

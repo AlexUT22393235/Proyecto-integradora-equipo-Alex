@@ -27,6 +27,7 @@
             </button>
         </div>
 
+        {{-- {{dd($divisiones)}}3 --}}
         {{-- Tabla --}}
         <div class="mt-5 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
             <table class="w-full table-auto bg-gray-200 rounded-t-lg">
@@ -35,6 +36,8 @@
                         <th class="p-2">Nomina</th>
                         <th class="p-2">Nombre</th>
                         <th class="p-2">Apellido</th>
+                        <th class="p-2">Contraseña</th>
+                        <th class="p-2">Rol</th>
                         <th class="p-2">División</th>
                         <th class="p-2">Estatus</th>
                         <th class="p-2">Acciones</th>
@@ -46,7 +49,9 @@
                         <td>{{ $usuario->identificador}}</td>
                         <td>{{ $usuario->nombres }}</td>
                         <td>{{ $usuario->apellidos }}</td>
-                        <td>{{ $usuario->nombre}}</td>
+                        <td>{{ $usuario->contrasena }}</td>
+                        <td>{{$usuario->tipo}}</td>
+                        <td>{{ $usuario->nombre}}</td>                  
                         <td>{{ $usuario->estado}}</td>
                             <td class="pt-2 flex justify-center space-x-10">
                                 <button
@@ -75,44 +80,58 @@
         <div class="bg-white p-8 rounded-lg z-20 modal-container w-96"> <!-- Ajuste del ancho del modal -->
             <span id="close-modal-btn" class="close absolute top-0 right-0 p-4">&times;</span>
             <h2 class="text-lg font-bold mb-4">Nuevo Asesor</h2>
-            <form" class="mt-5 p-5 border border-gray-200 rounded-lg bg-gray-100">
+            <form action="{{url('CrudAsesorDeAdmin')}}" method="POST" class="mt-5 p-5 border border-gray-200 rounded-lg bg-gray-100">
                 @csrf <!-- Agrega esto para proteger contra CSRF -->
                 
-                <div class="mb-4">
-                    <label for="nomina" class="block text-sm font-medium text-gray-700">Nomina</label>
-                    <input type="text" id="nomina" name="nomina" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
-                </div>
                 
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <label for="nombres" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <input type="text" id="nombres" name="nombres" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
 
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <label for="apellidos" class="block text-sm font-medium text-gray-700">Apellido</label>
+                    <input type="text" id="apellidos" name="apellidos" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="identificador" class="block text-sm font-medium text-gray-700">Nomina</label>
+                    <input type="text" id="identificador" name="identificador" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="contrasena" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                    <input type="text" id="contrasena" name="contrasena" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
                 
-                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Division</label>
-                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Choose a country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
+                <label for="tipo" class="block text-sm font-medium text-gray-700 mb-2">Rol</label>
+                <select id="tipo" name="tipo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    {{-- <option selected>Asigna el rol</option> --}}
+                    @foreach($role as $rol)   
+                        <option value="{{$rol->id_tipo_usuario}}">{{$rol->tipo}}</option>
+                    @endforeach
                 </select>
                 
-                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estatus</label>
-                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Choose a country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
+                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">División</label>
+                <select id="nombre" name="nombre" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Elige una división</option>
+                    @foreach($divisiones as $division)   
+                        <option value="{{$division->id_division}}">{{$division->nombre}}</option>
+                    @endforeach
                 </select>
+
+                <label for="estado" class="block text-sm font-medium text-gray-700 mb-2">Estatus</label>
+                <select id="estado" name="estado" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected> Elige el estatus</option>
+                    @foreach($status as $state)   
+                        <option value="{{$state->id_estado}}">{{$state->estado}}</option>
+                    @endforeach
+                    
+                </select>
+                
                 
                 <div class="flex justify-end mt-3">
-                    <button type="submit" class="px-4 py-2 bg-sge text-white rounded-lg">Guardar</button>
+                    <button type="submit" class="px-4 py-2 bg-sge text-white rounded-lg " onclick="closeModal()"">Guardar</button>
                     <button type="button" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg ml-4" onclick="closeModal()">Cancelar</button>
                 </div>
             </form>

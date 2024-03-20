@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\RequestsAdmin; //! USAR EL NOMBRE DE LA CARPETA RequestsAdmin
 
 use Illuminate\Foundation\Http\FormRequest;
 
