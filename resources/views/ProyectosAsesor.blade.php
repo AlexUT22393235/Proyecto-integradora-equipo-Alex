@@ -61,12 +61,12 @@
 
     <body>
 <div class="p-8">
-        <div class="text-black font-bold border-b border-zinc-400 px-5 py-3 text-2xl mx-5">             Proyectos           </div>
+        <div class="px-5 py-3 mx-5 text-2xl font-bold text-black border-b border-zinc-400">             Proyectos           </div>
 
 
         <div
-            class="mt-8 mx-20 overflow-auto h-250 border-separate border border-gray-300 bg-gray-200 rounded-t-lg items-center">
-            <table class="w-full table-auto bg-gray-200 rounded-t-lg">
+            class="items-center mx-20 mt-8 overflow-auto bg-gray-200 border border-separate border-gray-300 rounded-t-lg h-250">
+            <table class="w-full bg-gray-200 rounded-t-lg table-auto">
                 <thead class="text-center text-white bg-[#325b87]">
                     <tr>
                         <th class="p-2">Nombre del proyecto</th>
@@ -78,84 +78,17 @@
                     </tr>
                 </thead>
                 <tbody class="text-center bg-white">
-
+                    @foreach ($proyectos as $item)
                     <tr class= 'border border-gray-200'>
-                        <td>Proyecto 1</td>
-                        <td>Estudiante 1 </td>
-                        <td><span class="estado-aprobado">Aprobado</span></td>
-                        <td>3</td>
-
-                        <td class="pt-2 flex justify-center space-x-10">
-                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
+                        <td>{{$item->titulo}}</td>
+                        <td>{{$item->nombres}}</td>
+                        <td class="flex justify-center pt-2 space-x-10">
+                            <button type="button" class="px-4 py-2 rounded-full focus:outline-none focus:ring-4">
                                 <i class="accion-icono fas fa-eye"></i> </button>
 
                         </td>
-
-
                     </tr>
-
-                    <tr class= 'border border-gray-200'>
-                        <td>Proyecto 2</td>
-                        <td>Estudiante 2 </td>
-                        <td><span class="estado-proceso">Proceso</span></td>
-                        <td>2</td>
-
-                        <td class="pt-2 flex justify-center space-x-10">
-                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
-                                <i class="accion-icono fas fa-eye"></i> </button>
-
-
-                        </td>
-
-
-                    </tr>
-
-                    <tr class= 'border border-gray-200'>
-                        <td>Proyecto 3</td>
-                        <td>Estudiante 3 </td>
-                        <td><span class="estado-proceso">Proceso</span></td>
-                        <td>0</td>
-
-                        <td class="pt-2 flex justify-center space-x-10">
-                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
-                                <i class="accion-icono fas fa-eye"></i>
-                            </button>
-
-                        </td>
-
-
-                    </tr>
-
-                    <tr class= 'border border-gray-200'>
-                        <td>Proyecto 4</td>
-                        <td>Estudiante 4 </td>
-                        <td><span class="estado-proceso">Proceso</span></td>
-                        <td>0</td>
-
-                        <td class="pt-2 flex justify-center space-x-10">
-                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
-                                <i class="accion-icono fas fa-eye"></i> </button>
-
-                        </td>
-
-
-                    </tr>
-
-                    <tr class= 'border border-gray-200'>
-                        <td>Proyecto 5</td>
-                        <td>Estudiante 5 </td>
-                        <td><span class="estado-proceso">Proceso</span></td>
-                        <td>0</td>
-
-                        <td class="pt-2 flex justify-center space-x-10">
-                            <button type="button" class="  px-4 py-2 rounded-full focus:outline-none focus:ring-4 ">
-                                <i class="accion-icono fas fa-eye"></i> </button>
-
-                        </td>
-
-
-                    </tr>
-
+                    @endforeach
                 </tbody>
             </table>
         </div>
