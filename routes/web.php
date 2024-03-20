@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\AdminAsesores\AdminAsesoresController;
 use Illuminate\Support\Facades\Route;
-//importo el controlador de documentos con mis metodos 
+//importo el controlador de documentos con mis metodos
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProyectoController ;
 
@@ -16,16 +17,18 @@ Route::resource('documentos', DocumentoController::class);
 
 //Vistas KENIA
 //ruta de crud de documentos vista de presidente
-Route::get('/Admindocs', function () { 
+Route::get('/Admindocs', function () {
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //!Rafa FOOTER
-    
+
     return view('DashDireccion');
 });
-Route::get('/AdminAsesores', function () {//!Mia BOTON
-    return view('crudAsesores');
-});
+// Route::get('/AdminAsesores', function () {//!Mia BOTON
+//     return view('crudAsesores');
+// });
+Route::resource('AdminAsesores', AdminAsesoresController::class);
+
 Route::get('/asesoresyestudiantes', function () {
     return view('AsesoresEstudiantes');
 });
@@ -86,7 +89,7 @@ Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaci
 //Vistas JONNY
 Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
     return view('DocsDireccion');
-    
+
 });
 Route::get('/crudAlumnosAdmin', function(){
     return view('CrudAlumnosAdmin');
