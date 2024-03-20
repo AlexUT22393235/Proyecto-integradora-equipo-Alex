@@ -67,43 +67,30 @@
         <div class="absolute inset-0 bg-black opacity-75 modal-overlay" onclick="closeModal()"></div>
         <div class="bg-white p-8 rounded-lg z-20 modal-container w-96"> <!-- Ajuste del ancho del modal -->
             <span id="close-modal-btn" class="close absolute top-0 right-0 p-4">&times;</span>
-            <h2 class="text-lg font-bold mb-4">Nuevo Asesor</h2>
-            <form" class="mt-5 p-5 border border-gray-200 rounded-lg bg-gray-100">
+            <h2 class="text-lg font-bold mb-4">Nueva actividad</h2>
+            <form method="POST" action="{{url('calendario')}}" class="mt-5 p-5 border border-gray-200 rounded-lg bg-gray-100">
                 @csrf <!-- Agrega esto para proteger contra CSRF -->
                 
                 <div class="mb-4">
-                    <label for="nomina" class="block text-sm font-medium text-gray-700">Nomina</label>
-                    <input type="text" id="nomina" name="nomina" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <label for="nomina" class="block text-sm font-medium text-gray-700">Nombre de actividad:</label>
+                    <input type="text" id="titulo" name="titulo" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
                 
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Actividad:</label>
+                    <input type="text" id="tarea" name="tarea" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
 
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Fecha de incio: </label>
+                    <input type="date" id="fecha_inicial" name="fecha_inicial" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
-                
-                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Division</label>
-                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Choose a country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
-                
-                <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estatus</label>
-                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option selected>Choose a country</option>
-                  <option value="US">United States</option>
-                  <option value="CA">Canada</option>
-                  <option value="FR">France</option>
-                  <option value="DE">Germany</option>
-                </select>
-                
+
+               
+                <div class="mb-4">
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Fecha de final: </label>
+                    <input type="date" id="fecha_final" name="fecha_final" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                </div>
                 <div class="flex justify-end mt-3">
                     <button type="submit" class="px-4 py-2 bg-sge text-white rounded-lg">Guardar</button>
                     <button type="button" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg ml-4" onclick="closeModal()">Cancelar</button>
