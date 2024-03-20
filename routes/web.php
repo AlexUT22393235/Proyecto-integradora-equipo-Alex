@@ -11,6 +11,8 @@ use App\Http\Controllers\AdminControllers\DireccionController; // !SE IMPORTA EL
 use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 
 use App\Http\Controllers\ControllersAlex\ActivitiesController;
+use App\Http\Controllers\EstudianteAsesorad0\Estudiante;
+use App\Models\ModelsAlex\estudiantes;
 
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
@@ -80,9 +82,12 @@ Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
 
 
 //Vistas KAREN
-Route::get('/estudiantesAsesorados', function(){ //LISTO
-    return view('AlumnosAsesorados');
-});
+// Route::get('/estudiantesAsesorados', function(){ //LISTO
+//     return view('AlumnosAsesorados');
+// });
+
+Route::get('/estudiantesAsesorados/{id}', [Estudiante::class, 'index']);
+
 Route::get('/cartasAlumnoAdo', function(){ //!reutilizat diesño
     return view('CartasAlumnoAdo');
 });
