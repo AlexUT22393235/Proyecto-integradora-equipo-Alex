@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('plantillaAsesor')
 
 @section('content')
 <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">

@@ -5,9 +5,9 @@
     <body className="max-w-sm rounded overflow-hidden shadow-md  m-10">
 
 
-        <div class="container mx-auto">
+        <div class="p-8 container mx-auto">
 
-            <div class="text-zinc-400 border-b border-zinc-400 px-5 py-3 text-xl mx-5">             Calendario           </div>
+            <div class="text-black font-bold border-b border-zinc-400 px-5 py-3 mb-4 text-2xl mx-5">             Calendario           </div>
 
 
             <div class="flex p-4">
@@ -25,7 +25,7 @@
                         </div>
                        
 
-                        <div class="py-8">
+                        <div class="py-5">
                             <div class="font-bold text-xl mb-2 text-indigo-700">Citas</div>
                             <p class="p-2">
                                 <span class="text-[#325B87]">Asesorado 1:</span>
@@ -63,7 +63,7 @@
                                     $dayOfMonth = $rowIndex * 7 + $colIndex + 1;
                                     $dayToShow = $dayOfMonth <= 30 ? $dayOfMonth : $dayOfMonth - 30;
                                 @endphp
-                                <div class="border border-gray-200 py-8">
+                                <div class="border border-gray-200 py-5">
                                     <!-- Renderizar solo si el día está dentro del mes -->
                                     {{ $dayToShow }}
                                 </div>

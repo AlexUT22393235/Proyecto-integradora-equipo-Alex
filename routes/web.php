@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
+
+use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
 
@@ -13,6 +16,7 @@ Route::get('/Admindocs', function () {
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //!Rafa FOOTER
+    
     return view('DashDireccion');
 });
 Route::get('/AdminAsesores', function () {//!Mia BOTON
@@ -39,10 +43,10 @@ Route::get('/permisos', function(){ //! Corregir diseño
 Route::get('/editarPerfil', function(){//Giovanni LISTO
     return view('editarPerfil');
 });
-Route::get('/', function(){ //Andrea
+Route::get('/', function(){ //Andrea corregir
     return view('Login');
 });
-Route::get('/DashboardAlumno', function(){ //Andrea
+Route::get('/DashboardAlumno', function(){ //Andrea corregir
     return view('DashboardAlumno');
 });
 
@@ -50,13 +54,13 @@ Route::get('/DashboardAlumno', function(){ //Andrea
 Route::get('/donacionLibros', function () { // Lara SE QUITA
     return view('DonacionLibros');
 });
-Route::get('/calendario', function () { //Alex corregir
+Route::get('/calendario', function () { //!  corregir como Villa
     return view('calendario');
 });
-Route::get('/ProyectosAsesor', function () { //Antonino  corregir colores de status
+Route::get('/ProyectosAsesor', function () { //Antonino LISTO
     return view('ProyectosAsesor');
 });
-Route::get('/dashboardAsesor', function () { //Ricardo falta implementar iconos
+Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
     return view('dashboardAsesor');
 });
 
@@ -88,21 +92,25 @@ Route::get('/dashboardAdmin', function () {
 // Route::get('/librosAlumno', function () {
 //     return view('LibrosAlumno');
 // });
-Route::get('/ControlLibros', function () {
-    return view('ControlLibros');
+Route::get('/controlLibros', function () {
+    return view('controlLibros');
 });
 
 //Vistas DIEGO
-Route::get('/edicionProyecto', function(){ //!SE ESTÁ CORRIGIENDO gustavo
+Route::get('/edicionProyecto', function(){ // LISTO Gustavo
     return view('EdicionProyecto');
 });
 
-Route::get('project_details', [ProjectController::class, 'showDetails']);
+Route::get('project_details', [ProjectController::class, 'showDetails']); //Listo Diego
 
-Route::get('/alumnoDocs', function(){ //LISTO CHALE
+Route::get('/alumnoDocs', function(){ //LISTO Chale
     return view('AlumnoDocs');
 });
 
 Route::get('/CalendarioAlum', function () {
     return view('CalendarioAlum'); //! JUNTAR CON EL CALENDARIO DE ALEX
 });
+
+//! RUTA CRUD DE ADMIN ASESOR CONTROLADOR ---> RICHI EQUIPO
+Route::resource('CrudAsesorDeAdmin', AsesorController::class);  
+ 

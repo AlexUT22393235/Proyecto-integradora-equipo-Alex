@@ -1,4 +1,4 @@
-@extends('PlantillaAdmin')
+@extends('PlantillaDireccion')
 
 @section('content')
 <!DOCTYPE html>
@@ -101,7 +101,7 @@ th {
 
 <body>
 
-    <div class="border-b border-black px-5 py-3 font-bold text-2xl mx-5">
+    <div class="border-b border-zinc-400 p-8 font-bold text-2xl mx-5">
 Control de Libros      </div>
 <br>
 <div class="Tabla">

@@ -38,7 +38,7 @@
 
                 <div class="relative group ml-auto">
                     <button id="userDropdown" class="focus:outline-none">
-                        <img src='/user.png' class='h-[40%] w-[40%] items-center' alt="user" />
+                        <img src='/user.png' class='h-10 w-10' alt="user" />
                     </button>
 
                     <div id="userDropdownContent"

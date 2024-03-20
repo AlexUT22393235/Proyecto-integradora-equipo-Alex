@@ -42,14 +42,14 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
 
-                <a href="/Alumnos" class="border-l-4 border-red-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                <a href="/estudiantesAsesorados" class="border-l-4 border-red-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
                     <div class="flex flex-col items-center justify-center mb-4">
                         <h3 class="text-blue-800 text-2xl font-semibold mb-4">Alumnos</h3>
                         <img src="/alumno.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
                         <p class="text-gray-600 text-center">Información sobre los alumnos</p>
                     </div>
                 </a>
-                <a href="/DocumentosAlumnos" class="border-l-4 border-blue-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                <a href="/ProyectosAsesor" class="border-l-4 border-blue-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
                     <div class="flex flex-col items-center justify-center mb-4">
                         <h3 class="text-blue-800 text-2xl font-semibold mb-4">Proyectos</h3>
                         <img src="/proyecto.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
@@ -57,19 +57,19 @@
                     </div>
                 </a>
 
-                <a href="/Calendario" class="border-l-4 border-pink-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                <a href="/calendario" class="border-l-4 border-pink-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
                     <div class="flex flex-col items-center justify-center mb-4">
                         <h3 class="text-blue-800 text-2xl font-semibold mb-4">Calendario</h3>
-                        <img src="/calendario.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
+                        <img src="/citas.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
                         <p class="text-gray-600 text-center">Calendario para citas y tareas</p>
                     </div>
                 </a>
 
                 <a href="" class="border-l-4 border-green-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
                     <div class="flex flex-col items-center justify-center mb-4">
-                        <h3 class="text-blue-800 text-2xl font-semibold mb-4">Tus Asesorados</h3>
+                        <h3 class="text-blue-800 text-2xl font-semibold mb-4">Documentos del Alumno</h3>
                         <img src="/calificaciones-de-los-estudiantes.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
-                        <p class="text-gray-600 text-center">Tus alumnos asesorados</p>
+                        <p class="text-gray-600 text-center">Control de cartas de alumnos asesorados</p>
                     </div>
                 </a>
         </div>
