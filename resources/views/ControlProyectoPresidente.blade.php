@@ -1,3 +1,6 @@
+@extends('plantillaPresidente')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +28,7 @@
 
         .card {
             max-width: 800px;
+            position: relative;
         }
 
         .bold-text {
@@ -110,31 +114,69 @@
             cursor: pointer;
         }
 
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-100%);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
+        /* Estilos para formularios de confirmación y justificación */
 
-        @keyframes slideOut {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-100%);
-            }
-        }
-
-        .hidden {
+        .confirmation-form,
+        .justification-form {
             display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
 
-        #approval-animation {
-            animation: slideIn 1s forwards, slideOut 1s 2s forwards;
+        .confirmation-form h2,
+        .justification-form h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-align: center;
         }
+
+        .confirmation-form .btn-wrapper,
+        .justification-form .btn-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .confirmation-form .btn-wrapper button,
+        .justification-form .btn-wrapper button {
+            padding: 8px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirmation-form .btn-wrapper .confirm-btn {
+            background-color: #2563eb;
+            color: #fff;
+        }
+
+        .confirmation-form .btn-wrapper .cancel-btn {
+            background-color: #ccc;
+            color: #000;
+        }
+
+        .justification-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .justification-form .btn-wrapper button {
+            background-color: #2563eb;
+            color: #fff;
+        }
+
     </style>
 </head>
 
@@ -198,15 +240,15 @@
                     </div>
                     <div class="bg-white p-4 text-center rounded-2xl shadow-md card status-card wide-card">
                         <h2 class="text-blue-800 text-lg bold-text">Estatus del proyecto</h2>
-                        <p style="margin-bottom: 20px;"><strong>Rafael Villegas</strong> ha votado <span class="justify-button bg-blue-800 text-white px-2 py-1 rounded-md shadow-md ml-2">
+                        <p style="margin-bottom: 20px;"><strong>Rafael Villegas</strong> ha votado <button class="justify-button bg-blue-800 text-white px-2 py-1 rounded-md shadow-md ml-2">
                                 <img src="https://svgsilh.com/svg/1915455-3f51b5.svg" alt="Ojo" class="h-5 w-5 inline-block" />
-                            </span></p>
+                            </button></p>
                         <div class="justification hidden bg-gray-200 p-2 mt-2">
                             Rafael Villegas votó por el proyecto porque cree que tiene un gran potencial para mejorar la calidad de vida de muchas personas en su comunidad.
                         </div>
-                        <p style="margin-bottom: 20px;"><strong>Fernando Villafalla</strong> ha votado <span class="justify-button bg-blue-800 text-white px-2 py-1 rounded-md shadow-md ml-2">
+                        <p style="margin-bottom: 20px;"><strong>Fernando Villafalla</strong> ha votado <button class="justify-button bg-blue-800 text-white px-2 py-1 rounded-md shadow-md ml-2">
                                 <img src="https://svgsilh.com/svg/1915455-3f51b5.svg" alt="Ojo" class="h-5 w-5 inline-block" />
-                            </span></p>
+                            </button></p>
                         <div class="justification hidden bg-gray-200 p-2 mt-2">
                             Fernando Villafalla votó por el proyecto porque considera que es una oportunidad única para impulsar el desarrollo económico local.
                         </div>
@@ -214,40 +256,23 @@
                             <span class="text-lg mr-2"></span> Votar
                         </button>
                         <div id="vote-counter" class="text-right text-gray-600 mt-4" style="position: absolute; bottom: 10px; right: 10px;">Total de votos: 0</div>
-                        <div id="approval-animation" class="hidden absolute top-0 left-0 w-full h-full flex justify-center items-center bg-green-500 text-white text-4xl font-bold">
-                            PROYECTO APROBADO
+                    </div>
+
+                    <div class="confirmation-form">
+                        <h2>¿Estás seguro de votar este proyecto?</h2>
+                        <div class="btn-wrapper">
+                            <button class="confirm-btn">Sí</button>
+                            <button class="cancel-btn">No</button>
                         </div>
                     </div>
 
-                    <script>
-                        // Contador de votos
-                        let voteCount = 0;
-                        const voteButton = document.querySelector('.vote-button');
-                        const voteCounter = document.getElementById('vote-counter');
-                        const approvalAnimation = document.getElementById('approval-animation');
-
-                        voteButton.addEventListener('click', () => {
-                            voteCount++;
-                            voteCounter.textContent = Total de votos: ${voteCount};
-
-                            if (voteCount === 3) {
-                                voteButton.disabled = true; // Desactivar el botón después del tercer voto
-                                approvalAnimation.classList.remove('hidden'); // Mostrar la animación de aprobación
-                                setTimeout(() => {
-                                    approvalAnimation.classList.add('hidden'); // Ocultar la animación después de 3 segundos
-                                }, 3000);
-                            }
-                        });
-
-                        // Mostrar justificación al hacer clic en el botón "Ver Justificación"
-                        const justifyButtons = document.querySelectorAll('.justify-button');
-                        justifyButtons.forEach(button => {
-                            button.addEventListener('click', () => {
-                                const justification = button.parentElement.nextElementSibling;
-                                justification.classList.toggle('hidden');
-                            });
-                        });
-                    </script>
+                    <div class="justification-form">
+                        <h2>Escribir justificación</h2>
+                        <textarea id="justification-text" placeholder="Escribe tu justificación aquí..." rows="4"></textarea>
+                        <div class="btn-wrapper">
+                            <button class="submit-justification">Enviar</button>
+                        </div>
+                    </div>
 
                     <div class="bg-white p-4 text-center rounded-2xl shadow-md card white-card wide-card">
                         <h2 class="text-blue-800 text-lg bold-text">Comentarios:</h2>
@@ -272,31 +297,50 @@
             </div>
         </div>
     </div>
-
-    <!-- Confirmation Form -->
-    <div class="confirmation-form hidden">
-        <h3>¿Estás seguro de votar el proyecto?</h3>
-        <label for="justification">Escribir justificación:</label>
-        <textarea id="justification" class="rounded-md"></textarea>
-        <button class="confirm">Sí</button>
-        <button class="cancel">No</button>
-    </div>
-
     <script>
-        // Mostrar el formulario de confirmación al hacer clic en el botón de votar
         const voteButton = document.querySelector('.vote-button');
         const confirmationForm = document.querySelector('.confirmation-form');
-        const cancelButton = confirmationForm.querySelector('.cancel');
+        const cancelBtn = document.querySelector('.cancel-btn');
+        const justifyButtons = document.querySelectorAll('.justify-button');
+        const justificationForm = document.querySelector('.justification-form');
+        const submitJustificationBtn = document.querySelector('.submit-justification');
+
+        let voteCount = 0;
+        const voteCounter = document.getElementById('vote-counter');
 
         voteButton.addEventListener('click', () => {
-            confirmationForm.classList.remove('hidden');
+            confirmationForm.style.display = 'block';
         });
 
-        // Ocultar el formulario de confirmación al hacer clic en el botón de cancelar
-        cancelButton.addEventListener('click', () => {
-            confirmationForm.classList.add('hidden');
+        cancelBtn.addEventListener('click', () => {
+            confirmationForm.style.display = 'none';
+        });
+
+        document.querySelector('.confirm-btn').addEventListener('click', () => {
+            confirmationForm.style.display = 'none';
+            justificationForm.style.display = 'block';
+        });
+
+        submitJustificationBtn.addEventListener('click', () => {
+            const justification = document.getElementById('justification-text').value;
+            console.log("Justificación:", justification);
+            document.getElementById('justification-text').value = ''; // Limpiar el área de texto después de enviar la justificación
+            justificationForm.style.display = 'none';
+            voteCount++;
+            voteCounter.textContent = `Total de votos: ${voteCount}`;
+            if (voteCount === 3) {
+                voteButton.disabled = true;
+            }
+        });
+
+        justifyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const justification = button.parentElement.nextElementSibling;
+                justification.classList.toggle('hidden');
+            });
         });
     </script>
 </body>
 
 </html>
+@endsection

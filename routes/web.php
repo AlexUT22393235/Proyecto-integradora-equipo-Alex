@@ -3,9 +3,17 @@
 use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\ControllersAlex\ProyectoController;
+use App\Http\Controllers\ProyectoController ;
 
+use App\Http\Controllers\ControllerJonny\LibrosController;
+use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+use App\Http\Controllers\AdminControllers\DireccionController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
+
+use App\Http\Controllers\ControllersAlex\ActivitiesController;
+
+//uso resource para llamar a todos los metodos de una y no uno x uno
+Route::resource('documentos', DocumentoController::class);
 
 //Vistas KENIA
 //ruta de crud de documentos vista de presidente
@@ -13,6 +21,7 @@ Route::get('/Admindocs', function () {
     return view('Admindocs');
 });
 Route::get('/Direccion', function () { //!Rafa FOOTER
+    
     return view('DashDireccion');
 });
 Route::get('/AdminAsesores', function () {//!Mia BOTON
@@ -50,15 +59,21 @@ Route::get('/DashboardAlumno', function(){ //Andrea corregir
 Route::get('/donacionLibros', function () { // Lara SE QUITA
     return view('DonacionLibros');
 });
+// Route::get('/calendario', function () { //!  corregir como Villa
+//     return view('calendario');
+// });
+
 Route::get('/calendario', function () { //!  corregir como Villa
     return view('calendarioAsesor');
-});
+})->name('calendario');
 
-Route::resource('/ProyectosAsesor', ProyectoController::class);
-
+Route::post('/calendario', [ActivitiesController::class, 'store'])->name('actividades.store');
 // Route::get('/ProyectosAsesor', function () { //Antonino LISTO
 //     return view('ProyectosAsesor');
 // });
+
+Route::resource('/ProyectosAsesor', ProyectoController::class);
+
 Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
     return view('dashboardAsesor');
 });
@@ -81,6 +96,7 @@ Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaci
 //Vistas JONNY
 Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
     return view('DocsDireccion');
+    
 });
 Route::get('/crudAlumnosAdmin', function(){
     return view('CrudAlumnosAdmin');
@@ -91,16 +107,15 @@ Route::get('/dashboardAdmin', function () {
 // Route::get('/librosAlumno', function () {
 //     return view('LibrosAlumno');
 // });
-Route::get('/controlLibros', function () {
-    return view('controlLibros');
-});
+Route::get('/controlLibros', [LibrosController::class, 'mostrarLibros']);
+
 
 //Vistas DIEGO
 Route::get('/edicionProyecto', function(){ // LISTO Gustavo
     return view('EdicionProyecto');
 });
 
-Route::get('project_details', [ProjectController::class, 'showDetails']); //Listo Diego
+Route::get('project_details', [ProyectoController::class, 'showDetails']); //Listo Diego
 
 Route::get('/alumnoDocs', function(){ //LISTO Chale
     return view('AlumnoDocs');
@@ -109,3 +124,23 @@ Route::get('/alumnoDocs', function(){ //LISTO Chale
 Route::get('/CalendarioAlum', function () {
     return view('CalendarioAlum'); //! JUNTAR CON EL CALENDARIO DE ALEX
 });
+
+Route::get('/registroProyecto', function(){ // LISTO Gustavo
+    return view('RegistroProyecto');
+});
+
+Route::get('/mapeoProvicionalProyectos', function(){ // LISTO Gustavo
+    return view('mapeoProvicionalProyectos');
+});
+
+
+//! Rutas de recurso para Proyecto
+Route::resource('proyectos', ProyectoController::class);
+// Ruta para guardar un nuevo proyecto
+// Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos.index');
+// Route::post('/proyectos', [ProyectoController::class, 'store'])->name('proyectos.store');
+
+//! RUTA CRUD DE ADMIN ASESOR CONTROLADOR ---> RICHI EQUIPO
+Route::resource('CrudAsesorDeAdmin', AsesorController::class);
+Route::resource('CrudDireccionDeAdmin', DireccionController ::class);
+Route::resource('CrudPresidenteDeAdmin', PresidenteController ::class);
