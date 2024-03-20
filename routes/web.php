@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ProyectoController ;
 
 use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 
@@ -101,7 +101,7 @@ Route::get('/edicionProyecto', function(){ // LISTO Gustavo
     return view('EdicionProyecto');
 });
 
-Route::get('project_details', [ProjectController::class, 'showDetails']); //Listo Diego
+Route::get('project_details', [ProyectoController::class, 'showDetails']); //Listo Diego
 
 Route::get('/alumnoDocs', function(){ //LISTO Chale
     return view('AlumnoDocs');
@@ -110,6 +110,21 @@ Route::get('/alumnoDocs', function(){ //LISTO Chale
 Route::get('/CalendarioAlum', function () {
     return view('CalendarioAlum'); //! JUNTAR CON EL CALENDARIO DE ALEX
 });
+
+Route::get('/registroProyecto', function(){ // LISTO Gustavo
+    return view('RegistroProyecto');
+});
+
+Route::get('/mapeoProvicionalProyectos', function(){ // LISTO Gustavo
+    return view('mapeoProvicionalProyectos');
+});
+
+
+//! Rutas de recurso para Proyecto
+Route::resource('proyectos', ProyectoController::class);
+// Ruta para guardar un nuevo proyecto
+// Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos.index');
+// Route::post('/proyectos', [ProyectoController::class, 'store'])->name('proyectos.store');
 
 //! RUTA CRUD DE ADMIN ASESOR CONTROLADOR ---> RICHI EQUIPO
 Route::resource('CrudAsesorDeAdmin', AsesorController::class);  
