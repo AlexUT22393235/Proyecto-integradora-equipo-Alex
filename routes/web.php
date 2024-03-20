@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
-
+use App\Http\Controllers\ControllerJonny\LibrosController;
 use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 use App\Http\Controllers\AdminControllers\DireccionController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
@@ -85,6 +85,7 @@ Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaci
 //Vistas JONNY
 Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
     return view('DocsDireccion');
+    
 });
 Route::get('/crudAlumnosAdmin', function(){
     return view('CrudAlumnosAdmin');
@@ -95,9 +96,8 @@ Route::get('/dashboardAdmin', function () {
 // Route::get('/librosAlumno', function () {
 //     return view('LibrosAlumno');
 // });
-Route::get('/controlLibros', function () {
-    return view('controlLibros');
-});
+Route::get('/controlLibros', [LibrosController::class, 'mostrarLibros']);
+
 
 //Vistas DIEGO
 Route::get('/edicionProyecto', function(){ // LISTO Gustavo

@@ -26,13 +26,15 @@
                     </div>
                 </a>
 
-                <div class="border-l-4 border-green-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                <a href="/CrudAsesorDeAdmin" class="border-l-4 border-blue-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
                     <div class="flex flex-col items-center justify-center mb-4">
                         <h3 class="text-blue-800 text-2xl font-semibold mb-4">Asesores</h3>
                         <img src="/asesor.png" alt="Imagen de Proyecto" class=" h-20 object-cover mb-4">
-                        <p class="text-gray-600 text-center">Asesores del área de ingeniería</p>
+                        <p class="text-gray-600 text-center">Administrar asesores del área de ingeniería</p>
                     </div>
-                </div>
+                </a>
+
+             
 
                 <a href="/asesoresyestudiantes" class="border-l-4 border-red-500 bg-white p-10 rounded-2xl shadow-md flex flex-col justify-between mx-4 mb-4 transition-transform duration-300 transform hover:scale-105 hover:shadow-md hover:bg-gray-50">
                     <div class="flex flex-col items-center justify-center mb-4">
