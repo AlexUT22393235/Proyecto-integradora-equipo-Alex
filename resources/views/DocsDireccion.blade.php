@@ -68,6 +68,67 @@
         }
     </style>
 </head>
+<<<<<<< HEAD
+=======
+
+<!-- Enlace a los estilos generados por Laravel Mix -->
+<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+<!-- Enlace a la hoja de estilos de Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+
+ 
+        body {
+            font-family: 'OtraFuente', sans-serif;
+            background-color: #EEF1F9;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ddd;
+            border-radius: 15px; /* Redondea todas las esquinas de la tabla */
+            overflow: hidden; 
+        }
+
+        th, td {
+        
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+            color: #333;
+        }
+
+        th {
+            background-color: #0D476D;
+            color: #EEF1F9;
+        }
+
+        .download-icon-container {
+            text-align: center; /* Centra los iconos verticalmente */
+        }
+
+        .download-icon {
+            margin: 15px; /* Ajusta el margen para separar los iconos */
+            color: #3498db;
+            vertical-align: middle;
+        }
+
+        .download-icon-pdf {
+            color: #e74c3c;
+        }
+    </style>
+
+
+>>>>>>> 3d4c11fa82ae0d2e1143d97a0660773613b9cc35
 <body>
     <div class="p-2">
         <br />

@@ -1,5 +1,5 @@
 @vite('resources/css/app.css')
-@extends('PlantillaAdmin')
+@extends('plantilla')
 
 @section('content')
 <!DOCTYPE html>
