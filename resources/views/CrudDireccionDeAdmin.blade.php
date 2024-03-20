@@ -161,9 +161,6 @@
     </script>
 </body>
 </html>
-<<<<<<< HEAD
-@section('content')
-=======
+
 
 @endsection
->>>>>>> dacbd82f1946ddbe97747b492d23263b4066f815
