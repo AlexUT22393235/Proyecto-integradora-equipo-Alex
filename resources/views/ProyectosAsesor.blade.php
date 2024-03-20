@@ -71,8 +71,8 @@
                     <tr>
                         <th class="p-2">Nombre del proyecto</th>
                         <th class="p-2">Estudiante</th>
-                        <th class="p-2">Estatus</th>
-                        <th class="p-2">Votos</th>
+                        {{-- <th class="p-2">Estatus</th>
+                        <th class="p-2">Votos</th> --}}
                         <th class="p-2">Accion</th>
 
                     </tr>

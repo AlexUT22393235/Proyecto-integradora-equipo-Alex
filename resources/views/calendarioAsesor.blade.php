@@ -57,13 +57,13 @@
                 <!-- Sección del calendario -->
                 <!-- Calendario -->
                  
-                <div id="calendar" style="width: 100%; background-color: #fff; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 2rem; margin-left: 3.5rem; max-height: 745px; overflow-y: auto;">
+                <div id="calendar" style="width: 100%; background-color: #fff; border-radius: 0.75rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); padding: 2rem; margin-left: 3.5rem; margin-right:20px; margin-bottom:20px; max-height: 600px; ;">
 
                 
     <!-- Contenido del calendario aquí -->
 </div>
 
-<div id="modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
+<div id="modal" class="fixed inset-0 flex items-center justify-center z-10 hiddend">
         <div class="absolute inset-0 bg-black opacity-75 modal-overlay" onclick="closeModal()"></div>
         <div class="bg-white p-8 rounded-lg z-20 modal-container w-96"> <!-- Ajuste del ancho del modal -->
             <span id="close-modal-btn" class="close absolute top-0 right-0 p-4">&times;</span>
