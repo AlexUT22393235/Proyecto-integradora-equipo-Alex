@@ -1,127 +1,23 @@
 @extends('plantillaAsesor')
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Alumnos asesorados
-</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<div class="p-8">
-<body style="background-color: #EEF1F9">
-  <div class="font-bold text-black border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
-    Alumnos asesorados
-</div>
-  <div class="mt-10 justify-center">
-    <div class="flex flex-wrap justify-center mb-8">
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
+<div class="flex flex-wrap my-10 justify-center">
+  @foreach ($estudiantes as $estudiante)
+  <div class="flex flex-col border rounded-lg shadow-lg px-8 m-5 bg-white w-1/4 max-w-1/4">
+    <h6 class="text-xl text-center text-blue-600 m-3">{{$estudiante->nombres}}</h6>
+    <div class="flex">
+      <img src="{{$estudiante->foto}}" alt="profile-picture" class="relative h-20 rounded-xl shadow-lg" />
+      <div class="pl-5">
+        <p class="">{{$estudiante->titulo_proyecto}}</p>
+        <p class="">{{$estudiante->matricula}}</p>
+        <p class="">{{$estudiante->correo}}</p>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center mb-8">
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
+    <div class="flex justify-center m-5 gap-2">
+      <button class="bg-blue-600 p-2 rounded-lg text-white">Generar</button>
+      <button class="bg-blue-600 p-2 rounded-lg text-white">Generar</button>
+      <button class="bg-blue-600 p-2 rounded-lg text-white">Generar</button>
     </div>
-    <div class="flex flex-wrap justify-center mb-8">
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col border rounded-lg shadow-lg px-3 mx-4 bg-white">
-        <h6 class="text-xl text-center text-blue-600 m-3">Estudiante #</h6>
-        <div class="flex">
-          <img src="{{ asset('/usuario.webp') }}" alt="profile-picture" class="relative m-4 h-20 rounded-xl shadow-lg" />
-          <div class="m-5 mr-10 mb-10">
-            <p class="">Proyecto:$proyecto</p>
-            <p class="">Matricula:$matricula</p>
-            <p class="">Correo:$correo</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
-</body>
-</html>
+  </div>
+  @endforeach 
+  </div>
 @endsection

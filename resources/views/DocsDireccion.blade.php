@@ -68,8 +68,7 @@
         }
     </style>
 </head>
-<<<<<<< HEAD
-=======
+
 
 <!-- Enlace a los estilos generados por Laravel Mix -->
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -128,7 +127,6 @@
     </style>
 
 
->>>>>>> 3d4c11fa82ae0d2e1143d97a0660773613b9cc35
 <body>
     <div class="p-2">
         <br />

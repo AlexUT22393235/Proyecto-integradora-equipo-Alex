@@ -57,12 +57,140 @@
                                     </button>
                                 </td>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304959</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Jorge Negrete</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio H</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">SM51</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304960</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Maria Felix</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio H</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">SM53</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304961</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Dolores del Rio</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio H</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">SM54</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304962</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Cantinflas</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio M</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">DNM2</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304963</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Gael Garcia</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio G</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">DG32</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304964</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Salma Hayek</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio K</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">DT67</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304965</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Vicente Fernandez</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio H</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">SM52</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304966</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Diego Luna</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio J</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">SM54</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b hover:bg-gray-100">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">22304967</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Alfonso Cuaron</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Edificio K</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">DFT60</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center flex justify-center">
+                                    <button class="text-blue-700 hover:text-blue-700 mx-10">
+                                        Editar
+                                    </button>
+                                    <button class="text-red-600 hover:text-red-700 mx-">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </main>
-        
-    </body>
-    </html>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
 @endsection
