@@ -36,7 +36,7 @@
                         <th class="p-2">Nomina</th>
                         <th class="p-2">Nombre</th>
                         <th class="p-2">Apellido</th>
-                        <th class="p-2">Contraseña</th>
+                        {{-- <th class="p-2">Contraseña</th> --}}
                         <th class="p-2">Rol</th>
                         <th class="p-2">División</th>
                         <th class="p-2">Estatus</th>
@@ -49,7 +49,7 @@
                         <td>{{ $usuario->identificador}}</td>
                         <td>{{ $usuario->nombres }}</td>
                         <td>{{ $usuario->apellidos }}</td>
-                        <td>{{ $usuario->contrasena }}</td>
+                        {{-- <td>{{ $usuario->contrasena }}</td> --}}
                         <td>{{$usuario->tipo}}</td>
                         <td>{{ $usuario->nombre}}</td>                  
                         <td>{{ $usuario->estado}}</td>
@@ -99,10 +99,10 @@
                     <input type="text" id="identificador" name="identificador" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
 
-                <div class="mb-4">
+                {{-- <div class="mb-4">
                     <label for="contrasena" class="block text-sm font-medium text-gray-700">Contraseña</label>
                     <input type="text" id="contrasena" name="contrasena" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
-                </div>
+                </div> --}}
                 
                 <label for="tipo" class="block text-sm font-medium text-gray-700 mb-2">Rol</label>
                 <select id="tipo" name="tipo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
