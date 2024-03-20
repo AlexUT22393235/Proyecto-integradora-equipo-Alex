@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos 
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ControllersAlex\ProyectoController;
 
 
 //Vistas KENIA
@@ -52,9 +53,12 @@ Route::get('/donacionLibros', function () { // Lara SE QUITA
 Route::get('/calendario', function () { //!  corregir como Villa
     return view('calendarioAsesor');
 });
-Route::get('/ProyectosAsesor', function () { //Antonino LISTO
-    return view('ProyectosAsesor');
-});
+
+Route::resource('/ProyectosAsesor', ProyectoController::class);
+
+// Route::get('/ProyectosAsesor', function () { //Antonino LISTO
+//     return view('ProyectosAsesor');
+// });
 Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
     return view('dashboardAsesor');
 });
