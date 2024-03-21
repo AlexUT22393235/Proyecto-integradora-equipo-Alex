@@ -17,6 +17,8 @@ use App\Http\Controllers\ControllersAlex\ActivitiesController;
 use App\Http\Controllers\EstudianteAsesorad0\Estudiante;
 use App\Models\ModelsAlex\estudiantes;
 use App\Http\Controllers\EstudianteAsesorad0\ProyectoPresidenteController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ControllerJonny\AnteproyectoController;
 
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
@@ -110,6 +112,10 @@ Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
     return view('DocsDireccion');
 
 });
+Route::resource('docsDireccion', AnteproyectoController::class);
+// Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
+//     return view('DocsDireccion');
+// });
 Route::get('/crudAlumnosAdmin', function(){
     return view('CrudAlumnosAdmin');
 });
@@ -120,6 +126,7 @@ Route::get('/dashboardAdmin', function () {
 //     return view('LibrosAlumno');
 // });
 Route::get('/controlLibros', [LibrosController::class, 'mostrarLibros']);
+Route::get('/ControlLibros', [LibrosController::class, 'mostrarLibros']);
 
 
 //Vistas DIEGO

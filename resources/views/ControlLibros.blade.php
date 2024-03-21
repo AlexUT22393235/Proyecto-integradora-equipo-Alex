@@ -81,13 +81,15 @@ th {
         .export-buttons button {
             margin-left: 5px;
             padding: 5px 10px;
+            background-color: #325B87;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
         .export-buttons button:hover {
-            opacity: 0.8;
+            background-color: #23415a;
         }
         .Tabla{
             margin-left: 110px;
@@ -105,9 +107,9 @@ th {
     <br>
     <div class="Tabla">
         <div class="export-buttons">
-            <button id="copyButton" class="bg-blue-700 hover:bg-blue-800 text-white transition-transform duration-300 transform hover:scale-105 hover:shadow-md">Copiar</button>
-            <button id="excelButton" class="bg-green-700 hover:bg-green-800 text-white transition-transform duration-300 transform hover:scale-105 hover:shadow-md">Excel</button>
-            <button id="printButton" class="bg-yellow-700 hover:bg-yellow-800 text-white transition-transform duration-300 transform hover:scale-105 hover:shadow-md">Imprimir</button>
+            <button id="copyButton">Copiar</button>
+            <button id="excelButton">Excel</button>
+            <button id="printButton">Imprimir</button>
         </div>
         <table>
             <thead>

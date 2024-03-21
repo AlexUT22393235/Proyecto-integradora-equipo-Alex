@@ -17,3 +17,4 @@ class LibrosController extends BaseController
         return view('ControlLibros', compact('libros'));
     }
 }
+
