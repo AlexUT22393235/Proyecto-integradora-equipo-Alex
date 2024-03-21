@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="flex justify-end">
-                    <button type="submit" class="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Crear proyecto</button>
+                    <button  type="submit" class="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600" onclick="mostrarAlerta()">Crear proyecto</button>
                 </div>
             </div>
         </form>
@@ -127,7 +127,9 @@
         }
 
 
-
+        function mostrarAlerta() {
+        alert("¡El proyecto ha sido registrado exitosamente!");
+    }
     </script>
 
 </body>

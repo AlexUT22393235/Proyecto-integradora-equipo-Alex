@@ -7,7 +7,7 @@ use App\Models\ModelsAlex\proyectos;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class ProyectoController extends Controller
+class ProyectoControllerAlex extends Controller
 {
     public function index()
     {

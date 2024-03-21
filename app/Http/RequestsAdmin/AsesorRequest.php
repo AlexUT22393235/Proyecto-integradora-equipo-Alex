@@ -17,7 +17,7 @@ class AsesorRequest extends FormRequest
             'nombres' => 'required|string|max:50',
             'apellidos' => 'nullable|string|max:50',
             'identificador' => 'required|string|max:20',
-            'contrasena' => 'required|string',
+            // 'contrasena' => 'required|string',
             'tipo' => 'required|integer|exists:tipo_usuarios,id_tipo_usuario',
             'nombre' => 'required|integer|exists:divisiones,id_division',
             'estado' => 'required|integer|exists:estados,id_estado'

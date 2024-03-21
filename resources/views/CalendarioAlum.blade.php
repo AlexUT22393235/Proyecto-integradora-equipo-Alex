@@ -1,4 +1,4 @@
-@extends('plantillaAsesor')
+@extends('plantillaAlumno')
 
 @section('content')
 

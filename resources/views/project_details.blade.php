@@ -279,7 +279,15 @@
             </div>
         </div>
     </div>
+
     <script>
+
+        // Mostrar una alerta después de cargar la página
+        window.onload = function() {
+            alert("¡El proyecto ha sido registrado exitosamente!");
+        };
+
+
         const voteButton = document.querySelector('.vote-button');
         const confirmationForm = document.querySelector('.confirmation-form');
         const cancelBtn = document.querySelector('.cancel-btn');

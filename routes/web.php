@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProyectoController ;
+use App\Http\Controllers\ControllersAlex\ProyectoControllerAlex;
+
 
 use App\Http\Controllers\ControllerJonny\LibrosController;
 use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
@@ -77,7 +79,7 @@ Route::post('/calendario', [ActivitiesController::class, 'store'])->name('activi
 //     return view('ProyectosAsesor');
 // });
 
-Route::resource('/ProyectosAsesor', ProyectoController::class);
+Route::resource('/ProyectosAsesor', ProyectoControllerAlex::class);
 
 Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
     return view('dashboardAsesor');
