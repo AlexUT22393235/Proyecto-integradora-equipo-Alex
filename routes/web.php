@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ControllerJonny\LibrosController;
+use App\Http\Controllers\ControllerJonny\AnteproyectoController;
 
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
@@ -78,9 +79,10 @@ Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaci
 });
 
 //Vistas JONNY
-Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
-    return view('DocsDireccion');
-});
+Route::resource('docsDireccion', AnteproyectoController::class);
+// Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
+//     return view('DocsDireccion');
+// });
 Route::get('/crudAlumnosAdmin', function(){
     return view('CrudAlumnosAdmin');
 });

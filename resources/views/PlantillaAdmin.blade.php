@@ -14,7 +14,7 @@
         <nav style="background-color: #325b87;">
             <div class="flex items-center justify-between p-6">
                 <a href="/dashboardAdmin">
-                    <img src="https://github.com/AlexUT22393235/Proyecto-integradora-equipo-Alex/blob/integracion/public/images/logo.png?raw=true"
+                    <img src="/logo.png"
                         alt="Logo" class="w-auto h-9 max-w-32">
                 </a>
 
