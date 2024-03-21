@@ -16,6 +16,7 @@ use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA E
 use App\Http\Controllers\ControllersAlex\ActivitiesController;
 use App\Http\Controllers\EstudianteAsesorad0\Estudiante;
 use App\Models\ModelsAlex\estudiantes;
+use App\Http\Controllers\EstudianteAsesorad0\ProyectoPresidenteController;
 
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
@@ -99,9 +100,7 @@ Route::get('/cartasAlumnoAdo', function(){ //!reutilizat diesño
 Route::get('/dashboardPresidente', function(){ //LISTO
     return view('DashboardPresidente');
 });
-Route::get('/proyectosPresidente', function(){
-    return view('proyectosPresidente');
-});
+Route::resource('/proyectosPresidente', ProyectoPresidenteController::class);
 Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaciones
     return view('ControlProyectoPresidente');
 });
