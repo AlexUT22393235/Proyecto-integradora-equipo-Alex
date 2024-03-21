@@ -82,6 +82,9 @@ Route::get('/cartasAlumnoAdo', function(){ //!reutilizat diesño
 Route::get('/dashboardPresidente', function(){ //LISTO
     return view('DashboardPresidente');
 });
+Route::get('/proyectosPresidente', function(){
+    return view('proyectosPresidente');
+});
 Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaciones
     return view('ControlProyectoPresidente');
 });
