@@ -16,10 +16,11 @@ class AsesorAdmin extends Model
 
     protected $table = 'usuarios';
     protected $fillable = [
+        'id_usuario',
         'nombres',
         'apellidos',
         'identificador',
-        'contrasena',
+        // 'contrasena',
         'tipo_usuario_id',
         'division_id',
         'estado_id',

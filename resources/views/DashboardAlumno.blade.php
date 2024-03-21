@@ -32,12 +32,13 @@
     <div class="bg-blue-50 h-full items-center flex flex-row">
         <div class="flex flex-row h-full pb-24 pt-10 w-full mx-20 inter-variacion">
             <div class="h-auto w-[100%] m-1">
+                <a href="/project_details">
                 <div
                     class="flex flex-col justify-between h-[50%] p-4 mx-4 mb-4 transition-transform duration-300 transform bg-white border-l-4 border-yellow-500 shadow-md rounded-2xl hover:scale-105 hover:shadow-md hover:bg-gray-50">
-                    <h1 class="text-[#010D82] pb-2 text-2xl montserrat-alternates-regular-italic"> ESTADO DEL PROYECTO</h1>
+                    <h1 class="text-blue-800 text-2xl font-semibold mb-4"> Estado del Proyecto</h1>
                     
                 <div class="top-1 mt-0 flex">
-                    <img src="grafic.png" class="w-[40%]"/>
+                    <img src="grafic.png" class="w-[30%]"/>
                     <div class=" ml-10 text-left">
                         <div class="flex gap-4">
                             <div class="bg-green-500 rounded-lg h-8 w-8"></div> 
@@ -62,26 +63,30 @@
                     
                 </div>
                 </div>
+                </a>
 
-                <div
-                    class=" justify-between p-4 mx-4 h-[47%] transition-transform duration-300 transform bg-white border-l-4 border-red-500 shadow-md rounded-2xl hover:scale-105 hover:shadow-md hover:bg-gray-50">
-                    <h1 class="text-[#010D82] text-2xl montserrat-alternates-regular-italic"> ASESOR ACADÉMICO </h1>
-                    <div class=" ">
-                        <p class="pb-3 text-lg text-[#010D82] " style="word-wrap: break-word;">
-                           Correo:
-                            <a class="text-black">rvillegas@utcancun.edu.mx</a>
-                        </p>
-                        <p class="pb-3 text-lg text-[#010D82] " style="word-wrap: break-word;">
+                <div class="flex justify-between items-center p-4 mx-4 h-[47%] transition-transform duration-300 transform bg-white border-l-4 border-red-500 shadow-md rounded-2xl hover:scale-105 hover:shadow-md hover:bg-gray-50">
+                    <div class="flex flex-col justify-between w-2/3">
+                        <h1 class="text-blue-800 text-2xl font-semibold mb-4">Asesor Académico</h1>
+                        <div class="pb-3 text-lg text-[#010D82]" style="word-wrap: break-word;">
+                            Correo:
+                            <a class="text-black" href="mailto:rvillegas@utcancun.edu.mx">rvillegas@utcancun.edu.mx</a>
+                        </div>
+                        <div class="pb-3 text-lg text-[#010D82]" style="word-wrap: break-word;">
                             Nombre:
-                            <a class="text-black"> Rafael Villegas</a>
-                        </p>
+                            <a class="text-black">Rafael Villegas</a>
+                        </div>
                     </div>
+                    <img src="/asesor.png" alt="Imagen de Proyecto" class="w-1/3 h-auto object-cover mb-4">
                 </div>
+                
+                
             </div>
             <div class="h-auto w-[100%] m-1">
+                <a href="/alumnoDocs">
                 <div
                     class="flex flex-col justify-between h-[50%] p-4 mx-4 mb-4 transition-transform duration-300 transform bg-white border-l-4 border-blue-500 shadow-md rounded-2xl hover:scale-105 hover:shadow-md hover:bg-gray-50">
-                    <h1 class="text-[#010D82]  text-2xl montserrat-alternates-regular-italic"> DOCUMENTOS PENDIENTES: </h1>
+                    <h1 class="text-blue-800 text-2xl font-semibold mb-4">Documentos Pendientes:</h1>
                 <h4 class="text-[#010D82] pb-2 text-xl -mt-20  montserrat-alternates-regular-italic">
                     Cartas faltantes:
                 </h4>
@@ -98,10 +103,11 @@
             </br>
                 
                 </div>
-
+            </a>
+            <a href="/CalendarioAlum">
                 <div
                     class="flex flex-col justify-between p-4 mx-4 h-[47%] transition-transform duration-300 transform bg-white border-l-4 border-green-500 shadow-md rounded-2xl hover:scale-105 hover:shadow-md hover:bg-gray-50">
-                    <h1 class="text-[#010D82] pb-2 text-2xl montserrat-alternates-regular-italic"> CALENDARIO </h1>
+                    <h1 class="text-blue-800 text-2xl font-semibold mb-4"> Calendario </h1>
                 <h4 class="text-[#010D82] pb-2 text-xl montserrat-alternates-regular-italic">
                     Mis pendientes
                 </h4>
@@ -115,7 +121,7 @@
                         <input type="checkbox" />
                     </p>
                 </div>
-            </br>
+            
                 <h4 class="text-[#010D82] pb-2 text-xl montserrat-alternates-regular-italic">
                     Mis próximas citas
                 </h4>
@@ -125,6 +131,7 @@
                     </p>
                 </div>
                 </div>
+            </a>
             </div>
 
             </div>

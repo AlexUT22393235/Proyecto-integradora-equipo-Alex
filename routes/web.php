@@ -5,12 +5,17 @@ use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos
 use App\Http\Controllers\DocumentoController;
 use App\Http\Controllers\ProyectoController ;
+use App\Http\Controllers\ControllersAlex\ProyectoControllerAlex;
+
 
 use App\Http\Controllers\ControllerJonny\LibrosController;
 use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 use App\Http\Controllers\AdminControllers\DireccionController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 
+use App\Http\Controllers\ControllersAlex\ActivitiesController;
+use App\Http\Controllers\EstudianteAsesorad0\Estudiante;
+use App\Models\ModelsAlex\estudiantes;
 
 //uso resource para llamar a todos los metodos de una y no uno x uno
 Route::resource('documentos', DocumentoController::class);
@@ -61,21 +66,33 @@ Route::get('/DashboardAlumno', function(){ //Andrea corregir
 Route::get('/donacionLibros', function () { // Lara SE QUITA
     return view('DonacionLibros');
 });
+// Route::get('/calendario', function () { //!  corregir como Villa
+//     return view('calendario');
+// });
+
 Route::get('/calendario', function () { //!  corregir como Villa
-    return view('calendario');
-});
-Route::get('/ProyectosAsesor', function () { //Antonino LISTO
-    return view('ProyectosAsesor');
-});
+    return view('calendarioAsesor');
+})->name('calendario');
+
+Route::post('/calendario', [ActivitiesController::class, 'store'])->name('actividades.store');
+// Route::get('/ProyectosAsesor', function () { //Antonino LISTO
+//     return view('ProyectosAsesor');
+// });
+
+Route::resource('/ProyectosAsesor', ProyectoControllerAlex::class);
+
 Route::get('/dashboardAsesor', function () { //Ricardo fLISTO
     return view('dashboardAsesor');
 });
 
 
 //Vistas KAREN
-Route::get('/estudiantesAsesorados', function(){ //LISTO
-    return view('AlumnosAsesorados');
-});
+// Route::get('/estudiantesAsesorados', function(){ //LISTO
+//     return view('AlumnosAsesorados');
+// });
+
+Route::get('/estudiantesAsesorados/{id}', [Estudiante::class, 'index']);
+
 Route::get('/cartasAlumnoAdo', function(){ //!reutilizat diesño
     return view('CartasAlumnoAdo');
 });
@@ -140,6 +157,3 @@ Route::resource('proyectos', ProyectoController::class);
 Route::resource('CrudAsesorDeAdmin', AsesorController::class);
 Route::resource('CrudDireccionDeAdmin', DireccionController ::class);
 Route::resource('CrudPresidenteDeAdmin', PresidenteController ::class);
-
-
-
