@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Documentos para el asesor</title>
+    <title>Documentos - Asesor</title>
 
     <!-- Enlace a los estilos generados por Laravel Mix -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
