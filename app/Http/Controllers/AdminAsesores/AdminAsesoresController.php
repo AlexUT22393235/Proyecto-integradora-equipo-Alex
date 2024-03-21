@@ -19,4 +19,9 @@ class AdminAsesoresController extends Controller
         $status = DB::select('select * from estados');
         return view('CrudAsesores', compact('asesor', 'divisiones', 'role', 'status'));
     }
+
+    public function delete($id)
+    {
+        DB::table('usuarios')->where('id_usuario', $id)->delete();
+    }
 }
