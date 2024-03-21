@@ -104,6 +104,9 @@ Route::resource('/proyectosPresidente', ProyectoPresidenteController::class);
 Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaciones
     return view('ControlProyectoPresidente');
 });
+Route::get('/AsesorDocs', function(){ //!Añadido por lalo
+    return view('AsesorDocs');
+});
 
 //Vistas JONNY
 Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
