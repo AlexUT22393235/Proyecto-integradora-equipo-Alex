@@ -191,11 +191,11 @@
                     <h2 class="text-blue-800 text-lg bold-text">Detalles del Proyecto:</h2>
                     <div class="mb-4">
                         <label for="company-name" class="block text-subtitle text-sm font-bold mb-2">Empresa</label>
-                        <input type="text" id="company-name" value="{{ $proyecto->empresa }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="company-name" value="UT" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="mb-4">
                         <label for="advisor-name" class="block text-subtitle text-sm font-bold mb-2">Asesor</label>
-                        <input type="text" id="advisor-name" value="{{ $proyecto->asesor }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="advisor-name" value="RV" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="mb-4">
                         <label for="project-title" class="block text-subtitle text-sm font-bold mb-2">Título del Proyecto</label>
@@ -203,7 +203,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="career" class="block text-subtitle text-sm font-bold mb-2">Carrera</label>
-                        <input type="text" id="career" value="{{ $proyecto->carrera }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="career" value="Desarrollo de Software Multiplataforma" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="flex mb-4 mr-4">
                         <div class="flex-grow mr-4">

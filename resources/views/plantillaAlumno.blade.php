@@ -35,7 +35,7 @@
                 <a href="project_details">
                   <button class="text-white">Proyecto</button>
               </a>
-                <a href="registroProyecto">
+                <a href="edicionProyecto">
                     <button class="text-white">Edición proyecto</button>
                 </a>
                 <a href="CalendarioAlum">
