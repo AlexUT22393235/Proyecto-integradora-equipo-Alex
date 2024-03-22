@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminAsesores\AdminAsesoresController;
+use App\Http\Controllers\EstudianteAsesorad0\ComentarioController;
+use App\Http\Controllers\EstudianteAsesorad0\VotoController;
 use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos
 use App\Http\Controllers\DocumentoController;
@@ -103,9 +105,15 @@ Route::get('/dashboardPresidente', function(){ //LISTO
     return view('DashboardPresidente');
 });
 Route::resource('/proyectosPresidente', ProyectoPresidenteController::class);
-Route::get('/controlProyectoPresidente', function(){ //LISTO checar implementaciones
-    return view('ControlProyectoPresidente');
+
+Route::get('/controlProyectoPresidente', function(){
+    $votos = DB::select('call getVotos()');
+    $comentarios = DB::select('call getComentarios()');
+    return view('controlProyectoPresidente', compact('votos', 'comentarios'));
 });
+
+Route::post('/voto', [VotoController::class, 'store'])->name('voto.store');
+Route::post('/comentario', [ComentarioController::class, 'store'])->name('comentario.store');
 
 //Vistas JONNY
 Route::get('/docsDireccion', function(){ //! FERNANDO TERMINAR
