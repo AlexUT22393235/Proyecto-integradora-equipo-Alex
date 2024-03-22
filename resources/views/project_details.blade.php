@@ -191,45 +191,45 @@
                     <h2 class="text-blue-800 text-lg bold-text">Detalles del Proyecto:</h2>
                     <div class="mb-4">
                         <label for="company-name" class="block text-subtitle text-sm font-bold mb-2">Empresa</label>
-                        <input type="text" id="company-name" value="Nombre de la empresa" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="company-name" value="{{ $proyecto->empresa }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="mb-4">
                         <label for="advisor-name" class="block text-subtitle text-sm font-bold mb-2">Asesor</label>
-                        <input type="text" id="advisor-name" value="Rafael Villegas" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="advisor-name" value="{{ $proyecto->asesor }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="mb-4">
                         <label for="project-title" class="block text-subtitle text-sm font-bold mb-2">Título del Proyecto</label>
-                        <input type="text" id="project-title" value="Título del proyecto" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="project-title" value="{{ $proyecto->titulo }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="mb-4">
                         <label for="career" class="block text-subtitle text-sm font-bold mb-2">Carrera</label>
-                        <input type="text" id="career" value="Nombre de la carrera" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                        <input type="text" id="career" value="{{ $proyecto->carrera }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                     </div>
                     <div class="flex mb-4 mr-4">
                         <div class="flex-grow mr-4">
                             <label for="start-date" class="block text-subtitle text-sm font-bold mb-2">Inicio</label>
-                            <input type="date" id="start-date" value="2024-01-01" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                            <input type="date" id="start-date" value="{{ $proyecto->fecha_inicio }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                         </div>
                         <div class="flex-grow">
                             <label for="end-date" class="block mb-2 text-sm font-bold text-subtitle">Final</label>
-                            <input type="date" id="end-date" value="2024-12-31" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
+                            <input type="date" id="end-date" value="{{ $proyecto->fecha_fin }}" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100" />
                         </div>
                     </div>
                     <div class="mb-4">
                         <label for="objectives" class="block text-subtitle text-sm font-bold mb-2">1. Objetivo General del Proyecto</label>
-                        <textarea id="objectives" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Este es el objetivo general del proyecto.</textarea>
+                        <textarea id="objectives" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">{{ $proyecto->objetivo }}</textarea>
                     </div>
                     <div class="mb-4">
                         <label for="problem-statement" class="block text-subtitle text-sm font-bold mb-2">2. Planteamiento del Problema</label>
-                        <textarea id="problem-statement" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Este es el planteamiento del problema.</textarea>
+                        <textarea id="problem-statement" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">{{ $proyecto->planteamiento }}</textarea>
                     </div>
                     <div class="mb-4">
                         <label for="justification" class="block text-subtitle text-sm font-bold mb-2">3. Justificación</label>
-                        <textarea id="justification" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100 comment-text">Esta es la justificación del proyecto.</textarea>
+                        <textarea id="justification" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100 comment-text">{{ $proyecto->justificacion }}</textarea>
                     </div>
                     <div class="mb-4">
                         <label for="activities" class="block text-subtitle text-sm font-bold mb-2">4. Actividades a realizar</label>
-                        <textarea id="activities" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">Estas son las actividades a realizar en el proyecto.</textarea>
+                        <textarea id="activities" readonly class="input-field block w-full p-2 rounded-lg bg-gray-100">{{ $proyecto->actividades }}</textarea>
                     </div>
                 </div>
                 <div class="flex flex-col w-full max-w-lg gap-4 other-cards">
@@ -274,7 +274,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
