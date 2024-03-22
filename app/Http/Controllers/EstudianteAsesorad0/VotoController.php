@@ -18,6 +18,6 @@ class VotoController extends Controller
         $voto->proyecto_id = $validated['proyecto_id'];
         $voto->motivo = $validated['motivo'];
         $voto->save();
-
+        return redirect()->route('controlProyectoPresidente.index')->with('success', 'Agregado exitosamente.');
     }
 }

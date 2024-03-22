@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminAsesores\AdminAsesoresController;
 use App\Http\Controllers\EstudianteAsesorad0\ComentarioController;
+use App\Http\Controllers\EstudianteAsesorad0\RutaController;
 use App\Http\Controllers\EstudianteAsesorad0\VotoController;
 use Illuminate\Support\Facades\Route;
 //importo el controlador de documentos con mis metodos
@@ -104,13 +105,14 @@ Route::get('/cartasAlumnoAdo', function(){ //!reutilizat diesño
 Route::get('/dashboardPresidente', function(){ //LISTO
     return view('DashboardPresidente');
 });
-Route::resource('/proyectosPresidente', ProyectoPresidenteController::class);
+Route::resource('proyectosPresidente', ProyectoPresidenteController::class);
 
-Route::get('/controlProyectoPresidente', function(){
-    $votos = DB::select('call getVotos()');
-    $comentarios = DB::select('call getComentarios()');
-    return view('controlProyectoPresidente', compact('votos', 'comentarios'));
-});
+Route::resource('controlProyectoPresidente', RutaController::class);
+// Route::get('/controlProyectoPresidente', function(){
+//     $votos = DB::select('call getVotos()');
+//     $comentarios = DB::select('call getComentarios()');
+//     return view('controlProyectoPresidente', compact('votos', 'comentarios'));
+// });
 Route::get('/AsesorDocs', function(){ //!Añadido por lalo
     return view('AsesorDocs');
 });

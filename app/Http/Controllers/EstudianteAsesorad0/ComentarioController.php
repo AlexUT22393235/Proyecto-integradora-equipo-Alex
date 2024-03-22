@@ -22,5 +22,6 @@ class ComentarioController extends Controller
         $comentario->proyecto_id = $validated['proyecto_id'];
         $comentario->estado_id = $validated['estado_id'];
         $comentario->save();
+        return redirect()->route('controlProyectoPresidente.index')->with('success', 'Agregado exitosamente.');
     }
 }
