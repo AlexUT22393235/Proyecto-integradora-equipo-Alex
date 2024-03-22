@@ -17,9 +17,4 @@ class Anteproyecto extends Model
             'tipo_documento_id',
             'estudiante_id',
         ];
-
-
-  
-
-   
 }

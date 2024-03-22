@@ -71,15 +71,15 @@
 <body>
     <div class="p-2">
         <br />
-        <div class="font-bold text-black border-b border-zinc-400 px-5 py-3 text-2xl mx-5">
+        <div class="px-5 py-3 mx-5 text-2xl font-bold text-black border-b border-zinc-400">
             Control de documentos del Alumno
         </div>
         <br />
         <div class="">
             <div class="p-5 ml-32">
-                <label for="matricula" class="block font-bold mb-2">Buscar la Matrícula del Alumno:</label>
+                <label for="matricula" class="block mb-2 font-bold">Buscar la Matrícula del Alumno:</label>
                 <input type="text" id="matricula" name="matricula" placeholder="Ingresa la Matrícula"
-                    class="w-50 -30 border border-gray-400 rounded-md p-2 input-with-shadow" />
+                    class="p-2 border border-gray-400 rounded-md w-50 -30 input-with-shadow" />
             </div>
         </div>
         <br>
@@ -88,8 +88,7 @@
                 <tr>
                     <th>Matrícula</th>
                     <th>Nombre</th>
-                    <th>Documento</th>
-                    <th>Tipo</th>
+                    <th>Nombre del Documento</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -98,7 +97,6 @@
                 <tr class="fila-documento">
                     <td>{{ $documento->matricula }}</td>
                     <td>{{ $documento->nombres}}   {{ $documento->apellidos }}</td>
-                    <td>{{ $documento->url }}</td>
                     <td>{{ $documento->tipo }}</td>
                     <td>
                         <button class="visualizar" data-url="{{ $documento->url }}">
