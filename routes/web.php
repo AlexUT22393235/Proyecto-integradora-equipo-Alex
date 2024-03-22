@@ -12,7 +12,7 @@ use App\Http\Controllers\ControllerJonny\LibrosController;
 use App\Http\Controllers\AdminControllers\AsesorController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 use App\Http\Controllers\AdminControllers\DireccionController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
 use App\Http\Controllers\AdminControllers\PresidenteController; // !SE IMPORTA EL CONTROLADO DE ASSESORS PARA PODER USARLO
-
+use App\Http\Controllers\ControllerKenia\AsesoresEstudiantesControllers;
 use App\Http\Controllers\ControllersAlex\ActivitiesController;
 use App\Http\Controllers\EstudianteAsesorad0\Estudiante;
 use App\Models\ModelsAlex\estudiantes;
@@ -33,10 +33,12 @@ Route::get('/Direccion', function () { //!Rafa FOOTER
 //     return view('crudAsesores');
 // });
 Route::resource('AdminAsesores', AdminAsesoresController::class);
+Route::resource('/asesoresyestudiantes', AsesoresEstudiantesControllers::class);
 
-Route::get('/asesoresyestudiantes', function () {
-    return view('AsesoresEstudiantes');
-});
+// Route::get('/asesoresyestudiantes', function () {
+//     return view('AsesoresEstudiantes');
+// });
+
 
 //VISTAS RICHIE
 
