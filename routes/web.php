@@ -111,6 +111,9 @@ Route::get('/controlProyectoPresidente', function(){
     $comentarios = DB::select('call getComentarios()');
     return view('controlProyectoPresidente', compact('votos', 'comentarios'));
 });
+Route::get('/AsesorDocs', function(){ //!Añadido por lalo
+    return view('AsesorDocs');
+});
 
 Route::post('/voto', [VotoController::class, 'store'])->name('voto.store');
 Route::post('/comentario', [ComentarioController::class, 'store'])->name('comentario.store');

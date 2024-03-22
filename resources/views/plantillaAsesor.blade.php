@@ -111,9 +111,10 @@
                 <a href="estudiantesAsesorados">
                   <button class="text-white">Asesorados</button>
               </a>
-              <a href="cartasAlumnoAdo">
+              <a href="AsesorDocs">
                 <button class="text-white">Documentos</button>
             </a>
+            
               
             </div>
         </div>
