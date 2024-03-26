@@ -78,11 +78,18 @@ Route::get('/donacionLibros', function () { // Lara SE QUITA
 //     return view('calendario');
 // });
 
-Route::get('/calendario', function () { //!  corregir como Villa
-    return view('calendarioAsesor');
-})->name('calendario');
+// Route::get('/calendario', function () { //!  corregir como Villa
+//     return view('calendarioAsesor');
+// })->name('calendario');
 
-Route::post('/calendario', [ActivitiesController::class, 'store'])->name('actividades.store');
+//Estoy añadiendo  rutas nuevas
+Route::get('/calendario', 'ActivitiesController@index');
+Route::resource('/calendario', ActivitiesController::class);
+
+// Route::post('/calendario', [ActivitiesController::class, 'store'])->name('actividades.store');
+
+// Route::get('/calendario', [ActivitiesController::class, 'index'])->name('actividades.index');
+
 // Route::get('/ProyectosAsesor', function () { //Antonino LISTO
 //     return view('ProyectosAsesor');
 // });

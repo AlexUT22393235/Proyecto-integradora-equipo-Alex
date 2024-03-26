@@ -20,6 +20,9 @@
   </style>
 <!-- CalendarioRelaciones -->
 <!-- De salir algo mal, retirar todo de esta sección -->
+<!--SE AGREGÓ JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
     <script>
 
@@ -34,7 +37,7 @@
     customButtons:{
       deleteActivities:{
         text:'Limpiar',
-      
+
         click:function(){
           $('#modal')
           console.log("Se han borrado las actividades")
@@ -43,10 +46,11 @@
     },
 
     dateClick:function(info){
+      $('#fecha_inicial').val(info.dateStr);
       openModal();
       console.log(info);
       calendar.addEvent({title:"X", date:info.dateStr});
-      
+
     },
 
     eventClick:function(info){
@@ -55,39 +59,68 @@
 
     },
 
-    events: [
-    {
-        title: "X",
-        start: "2024-03-12T13:00:00", // Updated to ISO 8601 format,
-        end:"2024-03-13T13:00:00"
-    },
-    {
-        title: "Y",
-        start: "2024-03-14T13:00:00", // Updated to ISO 8601 format,
-        end:"2024-03-15T13:00:00",
-        descripcion:"Descripcion"
+    // events: [
+    //   //Hey, rey, todo funciona en conjunto, tanto controladores, modelos, vistas y rutas, no lo olvides
+      
+     
 
-    }
-    
-],
+    // ],
+
+    events:"{{url('/calendario/show')}}",
+
     eventColor: 'rgb(50, 91, 135)',
-    
+
 
     buttonText: {
       today: 'Hoy', // Cambia el texto del botón "today" a "Hoy"
       dayGridMonth: 'Mes',
       timeGridWeek: 'Semana'
     },
-    
+
+
+
+
           defaultDay: new Date(2024,3,12),
           initialView: 'dayGridMonth'
         });
         calendar.setOption('locale', 'Es');
         calendar.render();
+        //Se agregaron funciones para capturar y mandar datos a la DB
+
+        $('#addEvent').click(function(){
+        ObjEvento=RecolectData("POST");
+        sendInformation('', objEvento)
       });
 
+      function RecolectData(mehtod){
+        newEvent={
+              titulo:$('#titulo').val(),
+              tarea:$('#tarea').val(),
+              fecha_inicial:$('#fecha_inicial').val(),	
+              fecha_final:$('#fecha_final').val(),
+              "_token":$("meta[name='csrf-token']").attr("content"),
+              'method':method
+        }
+        return(newEvent)
+      }
+
+      function sendInformation(accion, objEvento){
+        $.ajax({
+          type:"POST",
+          url:"{{url('/calendario')}}" + accion,
+          data: objEvento,
+          success:function(msg){console.log(msg);} ,
+                  error:function(){ alert(Error);}
+        })
+      }
+
+      });
+
+      
+
+      
     </script>
-  
+
 </head>
 <body class="bg-blue-50">
   <nav style="background-color: #325b87;">
@@ -101,7 +134,7 @@
                 <a href="dashboardAsesor">
                   <button class="text-white">Dashboard</button>
                 </a>
-                
+
                 <a href="calendario">
                   <button class="text-white">Calendario</button>
               </a>
@@ -114,12 +147,12 @@
               <a href="AsesorDocs">
                 <button class="text-white">Documentos</button>
             </a>
-            
-              
+
+
             </div>
         </div>
 
-    
+
     </div>
 </nav>
    <main>

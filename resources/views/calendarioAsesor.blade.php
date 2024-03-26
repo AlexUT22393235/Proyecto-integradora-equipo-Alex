@@ -82,8 +82,8 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="nombre" class="block text-sm font-medium text-gray-700">Fecha de incio: </label>
-                    <input type="date" id="fecha_inicial" name="fecha_inicial" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Fecha de incio:</label>
+                    <input type="text" id="fecha_inicial" name="fecha_inicial" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
 
                
@@ -92,7 +92,7 @@
                     <input type="date" id="fecha_final" name="fecha_final" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
                 <div class="flex justify-end mt-3">
-                    <button type="submit" class="px-4 py-2 bg-sge text-white rounded-lg">Guardar</button>
+                    <button id="addEvent"  class="px-4 py-2 bg-sge text-white rounded-lg">Guardar</button>
                     <button type="button" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg ml-4" onclick="closeModal()">Cancelar</button>
                 </div>
             </form>

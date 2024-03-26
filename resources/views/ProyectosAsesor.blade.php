@@ -78,6 +78,7 @@
                     </tr>
                 </thead>
                 <tbody class="text-center bg-white">
+                    dd($proyectos)
                     @foreach ($proyectos as $item)
                     <tr class= 'border border-gray-200'>
                         <td>{{$item->titulo}}</td>
