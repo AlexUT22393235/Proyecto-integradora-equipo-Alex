@@ -73,23 +73,23 @@
                 
                 <div class="mb-4">
                     <label for="nomina" class="block text-sm font-medium text-gray-700">Nombre de actividad:</label>
-                    <input type="text" id="titulo" name="titulo" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <input type="text" id="title" name="title" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
                 
                 <div class="mb-4">
                     <label for="nombre" class="block text-sm font-medium text-gray-700">Actividad:</label>
-                    <input type="text" id="tarea" name="tarea" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <input type="text" id="descripcion" name="descripcion" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
 
                 <div class="mb-4">
                     <label for="nombre" class="block text-sm font-medium text-gray-700">Fecha de incio:</label>
-                    <input type="text" id="fecha_inicial" name="fecha_inicial" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <input type="text" id="start" name="start" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
 
                
                 <div class="mb-4">
                     <label for="nombre" class="block text-sm font-medium text-gray-700">Fecha de final: </label>
-                    <input type="date" id="fecha_final" name="fecha_final" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+                    <input type="date" id="end" name="end" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
                 </div>
                 <div class="flex justify-end mt-3">
                     <button id="addEvent"  class="px-4 py-2 bg-sge text-white rounded-lg">Guardar</button>

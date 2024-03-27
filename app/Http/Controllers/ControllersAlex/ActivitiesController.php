@@ -40,8 +40,9 @@ class ActivitiesController extends Controller
 
     public function show()
     {
-        $data['eventos']=Activity::all();
-        return response()->json($data['eventos']);
+        $data['actividades']=Activity::all();
+        return response()->json($data['actividades']);      
+        // return response()->json($data['eventos']);
     }
 
     

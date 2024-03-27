@@ -46,16 +46,20 @@
     },
 
     dateClick:function(info){
-      $('#fecha_inicial').val(info.dateStr);
+      $('#start').val(info.dateStr);
       openModal();
       console.log(info);
-      calendar.addEvent({title:"X", date:info.dateStr});
+      
 
     },
 
     eventClick:function(info){
       alert('Título: ' + info.event.title + ' Descripcion: ' + info.event.extendedProps.descripcion);
       // alert('Descripcion: ' + info.event.extendedProps.descripcion);
+      $('#title').val(info.event.title);
+      $('#descripcion').val(info.event.extendedProps.descripcion);
+      $('#start').val(info.event.start);
+      openModal();
 
     },
 
@@ -80,7 +84,6 @@
 
 
 
-          defaultDay: new Date(2024,3,12),
           initialView: 'dayGridMonth'
         });
         calendar.setOption('locale', 'Es');
@@ -94,10 +97,10 @@
 
       function RecolectData(mehtod){
         newEvent={
-              titulo:$('#titulo').val(),
-              tarea:$('#tarea').val(),
-              fecha_inicial:$('#fecha_inicial').val(),	
-              fecha_final:$('#fecha_final').val(),
+              title:$('#title').val(),
+              descripcion:$('#descripcion').val(),
+              start:$('#start').val(),	
+              end:$('#end').val(),
               "_token":$("meta[name='csrf-token']").attr("content"),
               'method':method
         }
